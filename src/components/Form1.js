@@ -6,7 +6,14 @@ function Form1 ({
 }) {
   return (
     <div style={{ display: shouldDisplay ? "block" : "none" }}>
-
+        <form
+          name="contact"
+          method="post"
+          action="/thank-you/"  
+          data-netlify="true"
+          data-netlify-honeypot="bot-field"           
+        >  
+      <input type="hidden" name="form-name" value="contact" />    
         <div className="form-group">
               <div> 
                 <label htmlFor="checkbox" className="mr-2">Lloyds:</label>
@@ -30,6 +37,7 @@ function Form1 ({
                   />   
               </div>              
         </div>
+        </form>
     </div>
   );
 }

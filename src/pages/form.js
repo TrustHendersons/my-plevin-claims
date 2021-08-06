@@ -83,7 +83,7 @@ function MainComponent() {
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({ "form-name": "contact", getValues })
+      body: encode({ "form-name": "contact", ...getValues() })
     })
     .then((response) => {
       navigate("/thank-you/")
@@ -101,12 +101,12 @@ function MainComponent() {
 
 
         <form
-        name="contact"
-        method="post"
-        action="/thank-you/"  
-        data-netlify="true"
-        data-netlify-honeypot="bot-field"           
-      >  
+          name="contact"
+          method="post"
+          action="/thank-you/"  
+          data-netlify="true"
+          data-netlify-honeypot="bot-field"           
+        >  
       <input type="hidden" name="form-name" value="contact" />     
         {forms.map(form => form.component(register, errors))}
 
