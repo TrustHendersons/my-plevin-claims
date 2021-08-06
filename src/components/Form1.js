@@ -6,8 +6,7 @@ function Form1 ({
 }) {
   return (
     <div style={{ display: shouldDisplay ? "block" : "none" }}>
-      <form autoComplete="on">
-        <br />
+
         <div className="form-group">
               <div> 
                 <label htmlFor="checkbox" className="mr-2">Lloyds:</label>
@@ -31,7 +30,6 @@ function Form1 ({
                   />   
               </div>              
         </div>
-      </form>
     </div>
   );
 }

@@ -3,7 +3,14 @@ import React from "react";
 function Form2({ register, shouldDisplay }) {
   return (
     <div style={{ display: shouldDisplay ? "block" : "none" }}>
-      <form autoComplete="on">
+      <form
+        name="contact"
+        method="post"
+        action="/thank-you/"  
+        data-netlify="true"
+        data-netlify-honeypot="bot-field"           
+      >  
+      <input type="hidden" name="form-name" value="contact" />     
         <br />
         <div className="form-group">
           <label>User name</label>

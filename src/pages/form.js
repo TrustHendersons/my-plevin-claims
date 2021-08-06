@@ -99,7 +99,18 @@ function MainComponent() {
           <div>{currentForm}</div>
         </div>
 
+
+        <form
+        name="contact"
+        method="post"
+        action="/thank-you/"  
+        data-netlify="true"
+        data-netlify-honeypot="bot-field"           
+      >  
+      <input type="hidden" name="form-name" value="contact" />     
         {forms.map(form => form.component(register, errors))}
+
+        </form>
 
         {prevButton && (
           <button
