@@ -35,9 +35,11 @@ const Layout = ({ children }) => {
         </main>
 
         <footer>
-          © {new Date().getFullYear()} Built by
-          {` `}
-          <a href="https://2owls.co.uk">Owls</a>
+          <div className="container">          
+            © {new Date().getFullYear()} Built by
+            {` `}
+            <a href="https://2owls.co.uk">Owls</a>
+          </div>
         </footer>
     </>
   )

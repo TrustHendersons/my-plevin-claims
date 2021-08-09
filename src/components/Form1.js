@@ -7,23 +7,22 @@ function Form1 ({
   return (
     <div style={{ display: shouldDisplay ? "block" : "none" }}>
 
-        <h3 className="blue-dark mb-1">Please select the banks you had PPI with:</h3> 
+        <h3 className="text-blue-dark mb-1">Please select the banks you had PPI with:</h3> 
         <p>(you can select multiple banks)</p>
 
-        <div className="form-group grid grid-cols-2 gap-4">
+        <div className="form-group grid grid-cols-3 gap-4 align-items-center">
               <div> 
-                <label htmlFor="checkbox" className="mr-2">Lloyds:</label>
                 <input
                     type="checkbox"
                     id="lloyds"
                     name="lloyds"
                     value="yes" 
                     {...register('lloyds')}             
-                  />    
+                  />
+                <label htmlFor="lloyds" className="ml-2">Lloyds</label>                      
               </div>  
 
               <div>
-                <label htmlFor="checkbox" className="mr-2">Barclays:</label>
                 <input
                     type="checkbox"
                     id="barclays"                    
@@ -31,10 +30,10 @@ function Form1 ({
                     value="yes"                
                     {...register('barclays')}       
                   />   
+                <label htmlFor="barclays" className="ml-2">Barclays</label>                  
               </div> 
 
               <div>
-                <label htmlFor="checkbox" className="mr-2">Barclaycard:</label>
                 <input
                     type="checkbox"
                     id="barclaycard"                    
@@ -42,10 +41,10 @@ function Form1 ({
                     value="yes"                
                     {...register('barclaycard')}       
                   />   
+                <label htmlFor="barclaycard" className="ml-2">Barclaycard</label>                  
               </div>
 
               <div>
-                <label htmlFor="checkbox" className="mr-2">Natwest:</label>
                 <input
                     type="checkbox"
                     id="natwest"                    
@@ -53,21 +52,21 @@ function Form1 ({
                     value="yes"                
                     {...register('natwest')}       
                   />   
+                <label htmlFor="natwest" className="ml-2">Natwest</label>                  
               </div>  
 
               <div>
-                <label htmlFor="checkbox" className="mr-2">RBS:</label>
                 <input
                     type="checkbox"
                     id="rbs"                    
                     name="rbs"
                     value="yes"                
                     {...register('rbs')}       
-                  />   
+                  />
+                <label htmlFor="rbs" className="ml-2">RBS</label>                     
               </div>                
 
               <div>
-                <label htmlFor="checkbox" className="mr-2">TSB:</label>
                 <input
                     type="checkbox"
                     id="tsb"                    
@@ -75,10 +74,10 @@ function Form1 ({
                     value="yes"                
                     {...register('tsb')}       
                   />   
+                <label htmlFor="tsb" className="ml-2">TSB</label>                  
               </div> 
 
               <div>
-                <label htmlFor="checkbox" className="mr-2">Halifax:</label>
                 <input
                     type="checkbox"
                     id="halifax"                    
@@ -86,10 +85,10 @@ function Form1 ({
                     value="yes"                
                     {...register('halifax')}       
                   />   
+                <label htmlFor="halifax" className="ml-2">Halifax</label>                  
               </div>    
 
               <div>
-                <label htmlFor="checkbox" className="mr-2">Bank of Scotland:</label>
                 <input
                     type="checkbox"
                     id="bankofscotland"                    
@@ -97,10 +96,10 @@ function Form1 ({
                     value="yes"                
                     {...register('bankofscotland')}
                   />   
+                <label htmlFor="bankofscotland" className="ml-2">Bank of Scotland</label>                  
               </div> 
 
               <div>
-                <label htmlFor="checkbox" className="mr-2">HSBC:</label>
                 <input
                     type="checkbox"
                     id="hsbc"                    
@@ -108,10 +107,10 @@ function Form1 ({
                     value="yes"                
                     {...register('hsbc')}
                   />   
+                <label htmlFor="hsbc" className="ml-2">HSBC</label>                  
               </div>    
 
               <div>
-                <label htmlFor="checkbox" className="mr-2">Capital One:</label>
                 <input
                     type="checkbox"
                     id="capitalone"                    
@@ -119,10 +118,10 @@ function Form1 ({
                     value="yes"                
                     {...register('capitolone')}
                   />   
+                <label htmlFor="capitalone" className="ml-2">Capital One</label>                  
               </div> 
 
               <div>
-                <label htmlFor="checkbox" className="mr-2">MBNA:</label>
                 <input
                     type="checkbox"
                     id="mbna"                    
@@ -130,10 +129,10 @@ function Form1 ({
                     value="yes"                
                     {...register('mbna')}
                   />   
+                <label htmlFor="mbna" className="ml-2">MBNA</label>                  
               </div>    
 
               <div>
-                <label htmlFor="checkbox" className="mr-2">EGG:</label>
                 <input
                     type="checkbox"
                     id="egg"                    
@@ -141,10 +140,10 @@ function Form1 ({
                     value="yes"                
                     {...register('egg')}
                   />   
+                <label htmlFor="egg" className="ml-2">EGG</label>                  
               </div>  
 
               <div>
-                <label htmlFor="checkbox" className="mr-2">Mint:</label>
                 <input
                     type="checkbox"
                     id="mint"                    
@@ -152,10 +151,10 @@ function Form1 ({
                     value="yes"                
                     {...register('mint')}
                   />   
+                <label htmlFor="mint" className="ml-2">Mint</label>                  
               </div>    
 
               <div>
-                <label htmlFor="checkbox" className="mr-2">Clydesdale Bank:</label>
                 <input
                     type="checkbox"
                     id="clydesdale"                    
@@ -163,10 +162,10 @@ function Form1 ({
                     value="yes"                
                     {...register('clydesdale')}
                   />   
+                <label htmlFor="clydesdale" className="ml-2">Clydesdale Bank</label>                  
               </div>   
 
               <div>
-                <label htmlFor="checkbox" className="mr-2">Yorkshire Bank:</label>
                 <input
                     type="checkbox"
                     id="yorkshire"                    
@@ -174,10 +173,10 @@ function Form1 ({
                     value="yes"                
                     {...register('yorkshire')}
                   />   
+                <label htmlFor="yorkshire" className="ml-2">Yorkshire Bank</label>                  
               </div>    
 
               <div>
-                <label htmlFor="checkbox" className="mr-2">M&amp;S Bank:</label>
                 <input
                     type="checkbox"
                     id="mands"                    
@@ -185,10 +184,11 @@ function Form1 ({
                     value="yes"                
                     {...register('mands')}
                   />   
+                <label htmlFor="mands" className="ml-2">M&amp;S Bank</label>                  
               </div>  
 
               <div>
-                <label htmlFor="checkbox" className="mr-2">Santander:</label>
+
                 <input
                     type="checkbox"
                     id="santander"                    
@@ -196,33 +196,33 @@ function Form1 ({
                     value="yes"                
                     {...register('santander')}
                   />   
+                <label htmlFor="santander" className="ml-2">Santander</label>                  
               </div>    
 
               <div>
-                <label htmlFor="checkbox" className="mr-2">Alliance &amp; Leicester:</label>
                 <input
                     type="checkbox"
                     id="alliance"                    
                     name="alliance"
                     value="yes"                
                     {...register('alliance')}
-                  />   
+                  />
+                <label htmlFor="alliance" className="ml-2">Alliance &amp; Leicester</label>                     
               </div>  
 
 
               <div>
-                <label htmlFor="checkbox" className="mr-2">Abbey National:</label>
                 <input
                     type="checkbox"
                     id="abbey"                    
                     name="abbey"
                     value="yes"                
                     {...register('abbey')}
-                  />   
+                  />
+                <label htmlFor="abbey" className="ml-2">Abbey National</label>                     
               </div> 
 
               <div>
-                <label htmlFor="checkbox" className="mr-2">Black Horse:</label>
                 <input
                     type="checkbox"
                     id="blackhorse"                    
@@ -230,10 +230,10 @@ function Form1 ({
                     value="yes"                
                     {...register('blackhorse')}
                   />   
+                <label htmlFor="blackhorse" className="ml-2">Black Horse</label>                  
               </div>    
 
               <div>
-                <label htmlFor="checkbox" className="mr-2">Northern Rock:</label>
                 <input
                     type="checkbox"
                     id="northernrock"                    
@@ -241,10 +241,10 @@ function Form1 ({
                     value="yes"                
                     {...register('northernrock')}
                   />   
+                <label htmlFor="northernrock" className="ml-2">Northern Rock</label>                  
               </div>   
 
               <div>
-                <label htmlFor="checkbox" className="mr-2">Co-operative Bank:</label>
                 <input
                     type="checkbox"
                     id="coop"                    
@@ -252,6 +252,7 @@ function Form1 ({
                     value="yes"                
                     {...register('coop')}
                   />   
+                <label htmlFor="coop" className="ml-2">Co-operative Bank</label>                  
               </div>    
 
 

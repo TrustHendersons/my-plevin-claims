@@ -5,13 +5,15 @@ import { StaticImage } from "gatsby-plugin-image"
 
 const Header = ({ siteTitle }) => (
   <header>
-    <StaticImage
-      src="../images/ypc-logo.png"
-      width={200}
-      quality={95}
-      formats={["AUTO", "WEBP", "AVIF"]}
-      alt="Your Plevin Claims"
-    />
+    <div className="container">
+      <StaticImage
+        src="../images/ypc-logo.png"
+        width={200}
+        quality={95}
+        formats={["AUTO", "WEBP", "AVIF"]}
+        alt="Your Plevin Claims"
+      />
+    </div>
   </header>
 )
 

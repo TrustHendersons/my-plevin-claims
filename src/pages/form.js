@@ -131,28 +131,28 @@ function MainComponent() {
 
         {prevButton && (
           <button
-            className="btn-green"
+            className="btn-blue"
             type="button"
             onClick={moveToPrevious}
           >
-            back
+            Back
           </button>
         )}
 
         {nextButton && (
           <button 
-            className="btn-green" 
+            className="btn-blue" 
             type="button" 
             onClick={moveToNext}
           >
-            next
+            Next
           </button>
         )}
 
         {currentForm === 3 && (
           <button
             onClick={handleSubmit}
-            className="btn-blue"
+            className="btn-green"
             type="submit"
           >
             Submit

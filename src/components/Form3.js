@@ -5,7 +5,10 @@ function Form3({ register, shouldDisplay }) {
 
     <div style={{ display: shouldDisplay ? "block" : "none" }}>
 
-        <div class="grid grid-flow-row grid-col-3 gap-4"> 
+        <h3 className="text-blue-dark mb-1">Please provide your contact details.</h3> 
+        <p>This is so we can contact you and send you documentation regarding your claim.</p> 
+
+        <div class="grid grid grid-cols-2 gap-4"> 
 
         <div>
         <label htmlFor="email"  class="mr-2">Email:</label>
@@ -30,7 +33,7 @@ function Form3({ register, shouldDisplay }) {
         />  
         </div>  
 
-        <div>
+        <div className="col-span-2">
           <input
               className="float-left m-3"
               type="checkbox"
