@@ -4,27 +4,52 @@
 
 
 body {
-  background: #eeeeee;
+  background: #eeeeee; 
 }
+
+/*--- sticky footer ---*/
+#gatsby-focus-wrapper, #___gatsby {
+  display: flex;
+  flex-direction: column;  
+  min-height: 100vh;
+
+  overflow-y: auto;
+}
+
 .container {
-    max-width: 960px;
-    margin: 0 auto;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+header {
+  padding: 1rem;
+  margin-bottom: 1rem;
 }
 
 footer {
-    color: #eee;
-    background: #394053;
+  color: #eee;
+  background: #394053;
 
-    padding: 3rem 0;
+  margin-top: 3rem;
+  padding: 2rem;
+}
+
+
+/* type */
+
+h1, h2, h3, h4 {
+  font-family: circe, sans-serif;
+  font-weight: 800;
+  font-style: normal; 
 }
 
 @layer components {
     .btn-blue {
-      @apply py-2 px-4 m-2 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-red-400 focus:ring-opacity-75;
+      @apply py-2 px-4 m-2 bg-blue-500 text-white font-semibold rounded-md shadow-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-red-400 focus:ring-opacity-75;
     }
 
     .btn-green {
-        @apply py-2 px-4 m-2 bg-green-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-red-400 focus:ring-opacity-75;
+        @apply py-2 px-4 m-2 bg-green-500 text-white font-semibold rounded-md shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-red-400 focus:ring-opacity-75;
       }    
 
     .section {
