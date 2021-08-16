@@ -6,7 +6,7 @@ import { StaticImage } from "gatsby-plugin-image"
 
 const Header = ({ siteTitle }) => (
   <header>
-    <div className="container">
+    <div className="lg:container">
       <a href="" onClick={()=>{navigate("/")}}>
       <StaticImage
         src="../images/ypc-logo.png"
