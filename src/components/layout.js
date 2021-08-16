@@ -1,17 +1,10 @@
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.com/docs/use-static-query/
- */
-
 import * as React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
 import "./layout.css"
-import "../styles/global.css"
+import FeatherIcon from "feather-icons-react"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -24,6 +17,8 @@ const Layout = ({ children }) => {
     }
   `)
 
+  const feather = require('feather-icons')  
+
   return (
     <>
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
@@ -33,6 +28,29 @@ const Layout = ({ children }) => {
             {children}
           </div>  
         </main>
+
+        <div className="subfooter">
+          <div className="container">    
+            <div className="grid grid-cols-3 justify-items-center gap-4 text-center">
+              <div>
+                <FeatherIcon icon="award" size="36" className="mb-2 mx-auto"/>
+                <h4 className="mb-2">Easy process</h4>
+                <p>Start the simple online form today</p>
+              </div>
+              <div>
+                <FeatherIcon icon="award" size="36" className="mb-2 mx-auto"/>                
+                <h4 className="mb-2">Expert Assistance</h4>
+                <p>Over 10 years reclaiming money for people like you</p>
+              </div>
+              <div>
+                <FeatherIcon icon="award" size="36" className="mb-2 mx-auto"/>                
+                <h4 className="mb-2">Friendly Team</h4>
+                <p>We will take care of everything</p>
+              </div>
+            </div>
+           </div> 
+        </div>
+
 
         <footer>
           <div className="container">          

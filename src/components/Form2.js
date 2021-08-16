@@ -7,7 +7,7 @@ function Form2({ register, shouldDisplay }) {
         <h3 className="text-blue-dark mb-1">Please provide your details.</h3> 
         <p>This is so we can find your bank account with the lenders.</p>      
 
-          <div className="form-group grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div className="form-group grid grid-rows-2 grid-cols-1 md:grid-cols-3 gap-4">
 
             <div>
             <label htmlFor="title" class="mr-2">Title:</label> <br />

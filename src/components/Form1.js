@@ -3,20 +3,28 @@ import React from "react";
 function Form1 ({
   register,
   shouldDisplay,
+  isChecked
 }) {
+
+  const handleChange = e => {
+    let isChecked = e.target.checked;
+  };
+
   return (
     <div style={{ display: shouldDisplay ? "block" : "none" }}>
 
-        <h3 className="text-blue-dark mb-1">Please select the banks you had PPI with:</h3> 
+        <h3 className="blue-dark mb-1">Please select the banks you had PPI with:</h3> 
         <p>(you can select multiple banks)</p>
 
-        <div className="form-group grid grid-cols-3 gap-4 align-items-center">
+        <div className="form-group grid grid-cols-2 md:grid-cols-3 gap-4 align-items-center">
               <div> 
                 <input
                     type="checkbox"
                     id="lloyds"
                     name="lloyds"
                     value="yes" 
+                    isChecked
+                    onChange={handleChange}                    
                     {...register('lloyds')}             
                   />
                 <label htmlFor="lloyds" className="ml-2">Lloyds</label>                      

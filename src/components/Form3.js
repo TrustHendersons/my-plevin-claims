@@ -42,7 +42,7 @@ function Form3({ register, shouldDisplay }) {
               value="yes"                
               {...register("privacy", { required: true } )}   
             />
-          <label htmlFor="checkbox" className="mr-2 text-sm">By clicking the box and entering your email address &amp; phone number you agree to our Privacy Policy and terms and conditions and to be contacted both by email &amp; phone. Message and data rates apply.</label>               
+          <label htmlFor="privacy" className="mr-2 text-sm">By clicking the box and entering your email address &amp; phone number you agree to our Privacy Policy and terms and conditions and to be contacted both by email &amp; phone. Message and data rates apply.</label>               
         </div>                                       
 
         </div>

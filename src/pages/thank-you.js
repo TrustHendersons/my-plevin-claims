@@ -11,11 +11,13 @@ const IndexPage = () => {
 
   <Layout>
     <div class="container">
-      <h1>Start your Plevin Check now</h1>
-      <p>Complete the quick and easy process below to see if you have a Plevin claim - <strong>Free online check</strong></p>
+    
       <div>
           <section className="section">
-              <h1>Thank you for your interest</h1>
+              <h1>THANK YOU BOB</h1>
+              <p>We now have your application for a Plevin claim. Our dedicated team of lawyers are now working on your
+              case on your behalf. We will send you all the relevant documentation via email in the next 7 days.If a
+              member of the team needs to discuss your claim they will contact you.</p>
           </section>  
       </div>
     </div>

@@ -108,11 +108,11 @@ function MainComponent() {
 
     <Layout>
 
-      <h2 className="text-center uppercase text-green-500">Start your free online Plevin Check Now</h2>
-      <hr />
+      <h2 className="text-center uppercase text-green-500 mb-2">Start your free online Plevin Check Now</h2>
+      <hr className="my-2"/>
       <p className="text-center">Answer the quick questions below to see if you may have a claim</p> 
 
-      <section className="section">
+      <section className="section md:shadow">
         <div className="progress">
           <h4 className="underline">Step {currentForm + 1}</h4>
         </div>
