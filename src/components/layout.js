@@ -24,7 +24,7 @@ const Layout = ({ children }) => {
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
 
         <main class="flex-grow">
-          <div className="container">
+          <div className="container h-full flex flex-wrap content-center px-4">
             {children}
           </div>  
         </main>
