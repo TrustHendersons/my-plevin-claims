@@ -16,6 +16,7 @@ function MainComponent() {
     triggerValidation,
     defaultValues,
     errors,
+    watch,
     getValues
   } = useForm({
     // You can set default values here
@@ -31,6 +32,8 @@ function MainComponent() {
   }
 
   const [currentForm, setCurrentForm] = useState(0);
+
+  const moreDetail = watch("moreDetail");
 
   const forms = [
     {
@@ -53,7 +56,9 @@ function MainComponent() {
           key={1}
           shouldDisplay={currentForm === 1}
           register={register}  
-          errors={errors}                  
+          errors={errors} 
+          watch={watch} 
+          moreDetail={moreDetail}             
         />
       )
     },
@@ -108,11 +113,13 @@ function MainComponent() {
 
     <Layout>
 
+      <div className="container">  
+
       <h2 className="text-center uppercase text-green-500 mb-2">Start your free online Plevin Check Now</h2>
       <hr className="my-2"/>
       <p className="text-center">Answer the quick questions below to see if you may have a claim</p> 
 
-      <section className="section md:shadow">
+      <section className="section md:shadow w-50">
         <div className="progress">
           <h4 className="underline">Step {currentForm + 1}</h4>
         </div>
@@ -159,7 +166,11 @@ function MainComponent() {
           </button>
         )}
 
-      </section>    
+      </section>  
+
+
+      </div>      
+
     </Layout>    
   );
 }

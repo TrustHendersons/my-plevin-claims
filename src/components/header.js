@@ -6,11 +6,11 @@ import { StaticImage } from "gatsby-plugin-image"
 
 const Header = ({ siteTitle }) => (
   <header>
-    <div className="lg:container">
+    <div className="lg:container px-4">
       <a href="" onClick={()=>{navigate("/")}}>
       <StaticImage
         src="../images/ypc-logo.png"
-        width={200}
+        width={150}
         quality={95}
         formats={["AUTO", "WEBP", "AVIF"]}
         alt="Your Plevin Claims"

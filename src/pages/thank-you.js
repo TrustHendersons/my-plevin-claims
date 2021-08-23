@@ -14,10 +14,11 @@ const IndexPage = () => {
     
       <div>
           <section className="section">
-              <h1>THANK YOU BOB</h1>
-              <p>We now have your application for a Plevin claim. Our dedicated team of lawyers are now working on your
-              case on your behalf. We will send you all the relevant documentation via email in the next 7 days.If a
-              member of the team needs to discuss your claim they will contact you.</p>
+              <h1>Thank you, BOB</h1>
+
+              <p>Our expert team will now begin checking whether you may be due a refund.  </p>
+
+              <p>Please keep an eye out for the relevant documentation that we will send you either by email or post in the next 7 days.  We may also contact you by telephone to obtain further information if required and should you have any questions at any time, please do not hesitate to contact us on ___________(tel) or ___________ (email).</p>
           </section>  
       </div>
     </div>

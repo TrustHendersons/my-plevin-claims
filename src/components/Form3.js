@@ -33,7 +33,7 @@ function Form3({ register, shouldDisplay }) {
         />  
         </div>  
 
-        <div className="col-span-2">
+        <div className="col-span-2 flex items-center">
           <input
               className="float-left m-3"
               type="checkbox"
@@ -42,7 +42,7 @@ function Form3({ register, shouldDisplay }) {
               value="yes"                
               {...register("privacy", { required: true } )}   
             />
-          <label htmlFor="privacy" className="mr-2 text-sm">By clicking the box and entering your email address &amp; phone number you agree to our Privacy Policy and terms and conditions and to be contacted both by email &amp; phone. Message and data rates apply.</label>               
+          <label htmlFor="privacy" className="mr-2 text-sm">I have read and understood the Privacy Policy and agree to be contacted using the details supplied.</label>               
         </div>                                       
 
         </div>
