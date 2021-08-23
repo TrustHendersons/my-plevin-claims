@@ -1,7 +1,4 @@
-import React from "react";  
-import { useForm } from "react-hook-form";
-
-
+import React, { Component } from "react";
 
 function Form2({ 
   register,  
@@ -9,6 +6,10 @@ function Form2({
   moreDetail,
   shouldDisplay
 }) {
+
+    const handleChange = e => {
+    let isChecked = e.target.checked;
+  };
 
   return (
     <div style={{ display: shouldDisplay ? "block" : "none" }}>
@@ -70,17 +71,42 @@ function Form2({
                   
                   className="border-t mr-0 border-b border-l"
                 />  
-                <button class="btn-blue-input w-auto">Find Address</button>
+                <button class="btn-blue-input w-auto" type="button">Find Address</button>  
+
               </div> 
 
               <div>
-                <label htmlFor="lastName" className="mr-2">More Details</label>
-                <input type="checkbox" {...register("moreDetail")} />
+                <p className="mr-2">Was this your address at the time?</p>
+                <input
+                    type="checkbox"
+                    id="PrevYes"
+                    name="PrevYes"
+                    value="yes" 
+                    isChecked
+                    onChange={handleChange}                            
+                    {...register('PrevYes')}             
+                  />
+                  <label htmlFor="prevYes" className="m-2">Yes</label>   
+                <input type="checkbox" 
+                    type="checkbox"
+                    id="PrevNo"
+                    name="PrevNo"
+                    value="yes" 
+                    isChecked
+                    onChange={handleChange}                    
+                    {...register('PrevNo')}                    
+                   />
+                  <label htmlFor="prevNo" className="m-2">No</label>   
 
                 {moreDetail && (
-                  <div>
-                    <label>Interests</label>
-                    <input type="text" {...register("Interests")} />
+                  <div className="mt-2">
+                    <label>Previous Address:</label>
+                    <input 
+                    type="text" 
+                    id="PrevAddress"                
+                    name="prevAddress"
+                    placeholder="Previous Address" 
+                    {...register("PrevAddress")} />
                   </div>
                 )}
 

@@ -14,7 +14,7 @@ const IndexPage = () => (
         <div>
           <h1 className="uppercase text-green-500 mb-1 uppercase">Missed the PPI deadline?</h1>
           <h2 className="uppercase text-green-500">PPI claim rejected?</h2>
-          <p>£billions can now be claimed in PPI2 'Plevin' cases after a crucial court ruling, which means the deadline no longer applies.</p>
+          <p>£billions can be claimed in 'Plevin' cases (also know as PPI2) after a landmark court ruling. <strong>Crucially, the PPI Deadline does NOT apply to these claims!</strong></p>
 
           <div className="section-start w-full rounded-md ">
           <h1 className="text-center uppercase mb-1">Start your check today </h1>
@@ -43,8 +43,19 @@ const IndexPage = () => (
       </div>
 
 
+      <div className="section-grey w-full rounded-md grid grid-cols-1 gap-4 text-center">
+        <div>
+          <h1>WHAT IS A PLEVIN CLAIM</h1>
+          <p className="text-sm mb-2">These are claims which are related to Payment Protection Insurance (PPI), specifically the commission paid in relation to sale of the PPI. </p>
+        </div>
+        <div>  
+          <p className="text-sm mb-2">In the landmark case Plevin v Paragon Personal Finance ('Plevin'), the Supreme Court ruled that a large commission that was not disclosed to the purchaser at the time of sale created an unfair relationship under the Consumer Credit Act. As a result the Claimant, Mrs Plevin, was entitled to a refund of the commission that was paid to the seller, plus any applicable interest. In the case of Plevin, the commission was over 71% of the PPI premium amount and the Financial Conduct Authority has subsequently confirmed that the average commission was a staggering 67%, and this was rarely disclosed. The good news is that the PPI deadline does not apply to Plevin claims and therefore potentially billions of pounds can still be reclaimed!</p>
+        </div>  
+      </div>
+
 
       <div className="section-grey w-full rounded-md grid grid-cols-4 gap-4 text-center">
+        <h1 className="col-span-4">How does the Plevin Free Check work?</h1>
         <div>
           <p className="text-sm mb-2"><strong>We offer this free check</strong> to assess whether there was an undisclosed commission on a PPI policy that you held, before you decide whether you wish to make a claim.</p>
         </div>
@@ -59,9 +70,10 @@ const IndexPage = () => (
         </div>
       </div>
 
-      <div >
-        <p className="text-sm text-center">You can pursue a claim yourself without using a Claims Management Company and without cost.  You will first need to complain directly to the appropriate third party who sold you the product and if this is unsuccessful, you can complain through the Financial Ombudsman Service or, if the third party is no longer trading, the Financial Services Compensation Scheme.</p>
+ 
 
+      <div>
+        <p className="text-sm text-center">You can pursue a claim yourself without using a Claims Management Company and without cost.  You will first need to complain directly to the appropriate third party who sold you the product and if this is unsuccessful, you can complain through the Financial Ombudsman Service or, if the third party is no longer trading, the Financial Services Compensation Scheme.</p>
       </div>
 
   </Layout>

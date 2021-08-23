@@ -33,7 +33,7 @@ function MainComponent() {
 
   const [currentForm, setCurrentForm] = useState(0);
 
-  const moreDetail = watch("moreDetail");
+  const moreDetail = watch("PrevNo");
 
   const forms = [
     {
