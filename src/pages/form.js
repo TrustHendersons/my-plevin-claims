@@ -120,6 +120,7 @@ function MainComponent() {
       <p className="text-center">Answer the quick questions below to see if you may have a claim</p> 
 
       <section className="section md:shadow w-50">
+        <progress max="3" value={currentForm}></progress>
         <div className="progress">
           <h4 className="underline">Step {currentForm + 1}</h4>
         </div>
