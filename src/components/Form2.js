@@ -103,6 +103,7 @@ function Form2({
                       type="text"
                       id="prevAddress"                
                       name="prevAddress"
+                      onChange={handleChange}   
                       placeholder="Enter your previous address"   
                       {...register("prevAddress", { required: true } )}              
                     />                        
