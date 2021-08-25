@@ -5,13 +5,16 @@ function Form4({ values, shouldDisplay }) {
 
     <div style={{ display: shouldDisplay ? "block" : "none" }}>
 
-      <h3>Want to display all values here like below</h3>
+
+      <h3>Form Results:</h3>
+      <div className="grid grid-cols-3">
       {Object.entries(values).map(([key, value]) => (
         <p key={key}>
           {key}: {value}
         </p>
+ 
       ))}
-
+      </div> 
     </div>
   );
 }

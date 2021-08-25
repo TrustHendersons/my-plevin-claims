@@ -14,8 +14,8 @@ function Form1 ({
   return (
     <div style={{ display: shouldDisplay ? "block" : "none" }}>
 
-        <h3 className="blue-dark mb-1">Please select the banks you had PPI with:</h3> 
-        <p>(you can select multiple banks)</p>
+        <h3 className="blue-dark mb-1">Please select all the banks you had PPI with:</h3> 
+        <p>(you can select multiple banks, this could mean you have more claims)</p>
 
         <div className="form-group grid grid-cols-2 md:grid-cols-3 gap-4 align-items-center">
               <div> 

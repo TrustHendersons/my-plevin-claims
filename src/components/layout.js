@@ -44,8 +44,8 @@ const Layout = ({ children }) => {
               </div>
               <div>
                 <FeatherIcon icon="award" size="36" className="mb-2 mx-auto"/>                
-                <h4 className="mb-2">Free Service</h4>
-                <p>No cost to you and no obligation</p>
+                <h4 className="mb-2 mt-2">Free Service</h4>
+                <p>No cost to you <br/> and no obligation</p>
               </div>
             </div>
            </div> 

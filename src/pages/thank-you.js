@@ -14,7 +14,7 @@ const IndexPage = () => {
     
       <div>
           <section className="section">
-              <h1>Thank you, BOB</h1>
+              <h1>Thank you</h1>
 
               <p>Our expert team will now begin checking whether you may be due a refund.  </p>
 

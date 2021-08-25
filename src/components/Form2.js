@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 
+
 function Form2({ 
   register,  
   watch,
@@ -62,21 +63,18 @@ function Form2({
               </div>    
 
               <div className="flex mt-6 col-span-2">
-                <input   
-                  type="text"
-                  id="postcode"                
-                  name="postcode"
-                  placeholder="Postcode" 
-                  {...register("postcode", { required: true } )}        
-                  
-                  className="border-t mr-0 border-b border-l"
-                />  
-                <button class="btn-blue-input w-auto" type="button">Find Address</button>  
-
+                <input
+                    type="text"
+                    id="address"                
+                    name="address"
+                    placeholder="Enter your address"   
+                    {...register("address", { required: true } )}              
+                  />  
+                		<button class="btn-blue-input">Find Address</button>  
               </div> 
 
-              <div>
-                <p className="mr-2">Was this your address at the time?</p>
+              <div className="flex mt-6 col-span-2">
+                <p className="mr-2">Was this your address at the time you took out the PPI?</p>
                 <input
                     type="checkbox"
                     id="PrevYes"
@@ -86,8 +84,8 @@ function Form2({
                     onChange={handleChange}                            
                     {...register('PrevYes')}             
                   />
-                  <label htmlFor="prevYes" className="m-2">Yes</label>   
-                <input type="checkbox" 
+                  <label htmlFor="prevYes" className="mx-2">Yes</label>   
+                  <input 
                     type="checkbox"
                     id="PrevNo"
                     name="PrevNo"
@@ -96,17 +94,18 @@ function Form2({
                     onChange={handleChange}                    
                     {...register('PrevNo')}                    
                    />
-                  <label htmlFor="prevNo" className="m-2">No</label>   
-
+                  <label htmlFor="prevNo" className="mx-2">No</label>   
+                </div>
+                <div>
                 {moreDetail && (
-                  <div className="mt-2">
-                    <label>Previous Address:</label>
-                    <input 
-                    type="text" 
-                    id="PrevAddress"                
-                    name="prevAddress"
-                    placeholder="Previous Address" 
-                    {...register("PrevAddress")} />
+                  <div className="col-span-2 mt-2">
+                    <input
+                      type="text"
+                      id="prevAddress"                
+                      name="prevAddress"
+                      placeholder="Enter your previous address"   
+                      {...register("prevAddress", { required: true } )}              
+                    />                        
                   </div>
                 )}
 
@@ -116,5 +115,7 @@ function Form2({
     </div>
   );
 }
+
+
 
 export default Form2;
