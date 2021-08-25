@@ -58,6 +58,8 @@ footer {
   color: #eee;
   background: #394053;
   padding: 2rem;
+
+  font-weight: 100;
 }
 
 
@@ -101,6 +103,26 @@ progress::-webkit-progress-bar {
 }
 progress::-webkit-progress-value {
   background-color: #7BAE7A;
+}
+
+
+/*-- lists --*/
+
+ol {
+  counter-reset: item;
+}
+
+ol > li {
+  counter-increment: item;
+}
+
+ol ol > li {
+  display: block;
+}
+
+ol ol > li:before {
+  content: counters(item, ".") ". ";
+  margin-left: -20px;
 }
 
 @layer components {

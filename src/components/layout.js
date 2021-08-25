@@ -1,7 +1,7 @@
 import * as React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
-
+import { Link } from "gatsby"
 import Header from "./header"
 import "./layout.css"
 import FeatherIcon from "feather-icons-react"
@@ -53,12 +53,21 @@ const Layout = ({ children }) => {
 
 
         <footer>
-          <div className="lg:container">          
-            © {new Date().getFullYear()} Built by
-            {` `}
-            <a href="https://2owls.co.uk">Owls</a>
-            <hr />
-            <p className="text-xs text-center">My Plevin Claims is a trading style of Henderson Claims Limited. Henderson Claims Limited is authorised and regulated by the Financial Conduct Authority with reference number FRN:836041. Henderson Claims Limited is a Claims Management Company (CMC). Registered with the Information Commissioners Office: registration number ZA147049. Registered address: Unit 2, Ashbrook Office Park, Manchester, M22 5LB. Registered in England and Wales, Company number 7646017. VAT number: 240 8769 88.</p>
+          <div className="lg:container">      
+            <div className="flex justify-between">  
+                <div>  
+                © {new Date().getFullYear()} Built by
+                {` `}
+                <a href="https://2owls.co.uk">Owls</a>
+                </div>
+              <div>
+                <Link className="m-2" to="/privacy/">Privacy Policy</Link>
+                <Link className="m-2" to="/terms/">Terms &amp; Conditions</Link>
+              </div>
+            </div>
+
+            <hr className="my-4"/>
+            <p className="text-xs text-center">Your Plevin Claims is a trading style of Henderson Claims Limited. Henderson Claims Limited is authorised and regulated by the Financial Conduct Authority with reference number FRN:836041. Henderson Claims Limited is a Claims Management Company (CMC). Registered with the Information Commissioners Office: registration number ZA147049. Registered address: Unit 2, Ashbrook Office Park, Manchester, M22 5LB. Registered in England and Wales, Company number 7646017. VAT number: 240 8769 88.</p>
           </div>
         </footer>
     </>
