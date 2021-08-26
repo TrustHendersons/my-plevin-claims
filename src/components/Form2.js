@@ -96,6 +96,7 @@ function Form2({
                    />
                   <label htmlFor="prevNo" className="mx-2">No</label>   
                 </div>
+                
                 <div>
                 {moreDetail && (
                   <div className="col-span-2 mt-2">

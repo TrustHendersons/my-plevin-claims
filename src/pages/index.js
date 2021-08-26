@@ -24,7 +24,7 @@ const IndexPage = () => (
           <div className="flex flex-wrap justify-center">
             <Link className="btn-start m-2" to="/form/">YES</Link>
             <Link className="btn-start m-2" to="/form/">UNSURE</Link>
-            <Link className="btn-start m-2" to="#">NO</Link>
+            <Link className="btn-start m-2" to="/no-claim/">NO</Link>
           </div>
       </div>    
 

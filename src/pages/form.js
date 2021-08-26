@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { navigate } from "gatsby"
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
-
+import { Helmet } from "react-helmet"
 import Layout from "../components/layout"
 import Form1 from "../components/Form1";
 import Form2 from "../components/Form2";
@@ -112,6 +112,8 @@ function MainComponent() {
   return (
 
     <Layout>
+
+    
 
       <div className="container">  
 

@@ -1,10 +1,6 @@
 import * as React from "react"
-import { Link } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
-import { navigate } from "gatsby"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import FeatherIcon from "feather-icons-react"
 
 const TermsPage = () => (
   <Layout>
@@ -15,7 +11,7 @@ const TermsPage = () => (
             <h1 class="display-1">Terms &amp; Conditions</h1>
             <hr />
             <div class="divider"></div>    
-                <p>Henderson Claims Limited is authorised and regulated by the Financial Conduct Authority with reference number 836041. </p>
+                <p>My Plevin Claims is a trading style of Henderson Claims Ltd and is authorised and regulated by the Financial Conduct Authority with reference number 836041. </p>
 
                 <p>Please be aware that there may be time limits attached to your claim such as when you may run out of time to bring a claim (known as the ‘limitation period’). </p>
 

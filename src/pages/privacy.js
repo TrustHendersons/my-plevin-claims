@@ -11,11 +11,11 @@ const PrivacyPage = () => (
     <h1 class="display-1">Privacy Policy</h1>
     <hr />
     <div class="divider"></div>    
-        <p>This Privacy Policy sets out how Henderson Claims Ltd t/a ‘Your Plevin Claims’, collects, uses and protects your information when you use this website or our services, in accordance with the Data Protection Act 2018 and the General Data Protection Regulation 2016 (GDPR).</p>
+        <p>This Privacy Policy sets out how Henderson Claims Ltd t/a ‘My Plevin Claims’, collects, uses and protects your information when you use this website or our services, in accordance with the Data Protection Act 2018 and the General Data Protection Regulation 2016 (GDPR).</p>
         
-        <p>Hendersons is the controller and is responsible for your personal data. We are committed to ensuring that your privacy is protected. By using our website, you may be providing us with some of your personal information and we want to make sure that we do not use your data in a way that you would not expect. Hendersons assures you that your personal information will only be used in accordance with this privacy statement and in compliance with the latest privacy regulations.</p>
+        <p>My Plevin Claims is the controller and is responsible for your personal data. We are committed to ensuring that your privacy is protected. By using our website, you may be providing us with some of your personal information and we want to make sure that we do not use your data in a way that you would not expect. My Plevin Claims assures you that your personal information will only be used in accordance with this privacy statement and in compliance with the latest privacy regulations.</p>
         
-        <p>Hendersons may change this policy in future by updating this page. You should check this page from time to time to ensure that you are happy with any changes. This policy is effective from January 2021.</p>
+        <p>My Plevin Claims may change this policy in future by updating this page. You should check this page from time to time to ensure that you are happy with any changes. This policy is effective from January 2021.</p>
         
         <h4 className="underline"> Personal Information We Collect</h4>                
 
@@ -169,7 +169,7 @@ const PrivacyPage = () => (
 
         <h4 className="underline">Security</h4>                
 
-        <p>Hendersons recognise the personal nature of the information we collect, process and store. As we are committed to ensuring that your information is secure we have put in place suitable physical, electronic and managerial procedures to prevent loss, unauthorised access, misuse or disclosure and to make sure that your information is safe and secure. If password access is required for certain parts of our website/application, you are responsible for keeping this password confidential.</p>     
+        <p>My Plevin Claims recognise the personal nature of the information we collect, process and store. As we are committed to ensuring that your information is secure we have put in place suitable physical, electronic and managerial procedures to prevent loss, unauthorised access, misuse or disclosure and to make sure that your information is safe and secure. If password access is required for certain parts of our website/application, you are responsible for keeping this password confidential.</p>     
         
         <h4 className="underline">Links to other websites</h4>                
 
@@ -177,11 +177,11 @@ const PrivacyPage = () => (
         
         <h4 className="underline">Disclosure / transfer of data</h4>                
 
-        <p>Hendersons may share or disclose personal information in the following situations:</p> 
+        <p>My Plevin Claims may share or disclose personal information in the following situations:</p> 
     
         <ul class="list-disc">
             <li>External third party service providers: We may use external printers, accountants, admin companies, call centres, compliance consultants and legal service providers (such as solicitors firms and barrister chambers) who may process your data on our behalf. Any external processors are subject to a data processing agreement to ensure the safety and protection of your data. None of our processors are allowed to use your data for any other purposes than instructed by us.</li>
-            <li>If we merge with or acquire a business, the business is restructured, or if our assets are acquired by a third party, any personal data held by Hendersons may be transferred, in which case you will be contacted by us to notify you of the transfer. </li>
+            <li>If we merge with or acquire a business, the business is restructured, or if our assets are acquired by a third party, any personal data held by My Plevin Claims may be transferred, in which case you will be contacted by us to notify you of the transfer. </li>
             <li>If we are under a duty to disclose or share your personal data to comply with any legal or regulatory obligation.</li>
             <li>To enforce or apply our terms of business and other agreements.</li>
             <li>To protect the rights, property, or safety of our company, other customers and others. This includes exchanging information with organisations for the purposes of fraud protection and credit risk reduction. </li>                      

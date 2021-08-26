@@ -1,9 +1,15 @@
 import * as React from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
+import { Helmet } from "react-helmet"
 import { navigate } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 import FeatherIcon from "feather-icons-react"
+
+<Helmet>
+  <script src='crafty_clicks.class.js' type="text/javascript" />
+  <script src='fetchifyPostcodeCreate.js' type="text/javascript"/>
+</Helmet>  
 
 const Header = ({ siteTitle }) => (
   <header>
