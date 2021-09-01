@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { navigate } from "gatsby"
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
-import { Helmet } from "react-helmet"
 import Layout from "../components/layout"
 import Form1 from "../components/Form1";
 import Form2 from "../components/Form2";
@@ -111,13 +110,13 @@ function MainComponent() {
 
   return (
 
-    <Layout>
-
     
+
+    <Layout>
 
       <div className="container">  
 
-      <h2 className="text-center uppercase text-green-500 mb-2">Start your free online Plevin Check Now</h2>
+      <h2 className="text-center uppercase text-green-500 mb-2">Start Your Free Plevin Check today</h2>
       <hr className="my-2"/>
       <p className="text-center">Answer the quick questions below to see if you may have a claim</p> 
 

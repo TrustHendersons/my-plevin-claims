@@ -5,7 +5,7 @@ import { StaticImage } from "gatsby-plugin-image"
 import Layout from "../components/layout"
 
 
-const ThanksPage = () => {
+const NoClaimPage = () => {
 
   return (
 
@@ -26,4 +26,4 @@ const ThanksPage = () => {
 
   }
 
-export default ThanksPage
+export default NoClaimPage

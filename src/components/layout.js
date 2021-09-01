@@ -5,6 +5,7 @@ import { Link } from "gatsby"
 import Header from "./header"
 import "./layout.css"
 import FeatherIcon from "feather-icons-react"
+import { Helmet } from "react-helmet"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -21,6 +22,7 @@ const Layout = ({ children }) => {
 
   return (
     <>
+
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
 
         <main class="flex-grow">

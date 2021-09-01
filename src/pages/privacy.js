@@ -201,7 +201,7 @@ const PrivacyPage = () => (
         
         <p><strong>Telephone:</strong> 0161 359 7140</p>
         
-        <p><strong>Write to us at:</strong> Henderson Claims Ltd t/a ‘Your Plevin Claims’, Unit 2, Longstone Rd, Manchester, M22 5LB</p>
+        <p><strong>Write to us at:</strong> Henderson Claims Ltd t/a ‘My Plevin Claims’, Unit 2, Longstone Rd, Manchester, M22 5LB</p>
         
         <h4 className="underline">Complaints</h4>                
 

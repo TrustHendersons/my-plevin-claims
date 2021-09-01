@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-
+import {Helmet} from "react-helmet";
 
 function Form2({ 
   register,  
@@ -12,7 +12,13 @@ function Form2({
     let isChecked = e.target.checked;
   };
 
+
+
   return (
+
+
+    
+
     <div style={{ display: shouldDisplay ? "block" : "none" }}>
 
         <h3 className="text-blue-dark mb-1">Please provide your details.</h3> 
@@ -63,14 +69,24 @@ function Form2({
               </div>    
 
               <div className="flex mt-6 col-span-2">
-                <input
-                    type="text"
-                    id="address"                
-                    name="address"
-                    placeholder="Enter your address"   
-                    {...register("address", { required: true } )}              
-                  />  
-                		<button class="btn-blue-input">Find Address</button>  
+
+                  <div id="postcode_lookup"></div>
+                  
+
+                  <label>Address Line One</label>
+                  <input id="first_line" type="text" />
+                  
+                  <label>Address Line Two</label>
+                  <input id="second_line" type="text" />
+
+                  <label>Address Line Three</label>
+                  <input id="third_line" type="text" />
+
+                  <label>Post Town</label>
+                  <input id="post_town" type="text" />
+
+                  <label>Postcode</label>
+                  <input id="postcode" type="text" />                                      
               </div> 
 
               <div className="flex mt-6 col-span-2">
@@ -117,7 +133,5 @@ function Form2({
     </div>
   );
 }
-
-
 
 export default Form2;
