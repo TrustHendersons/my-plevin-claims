@@ -12,7 +12,6 @@ export default function HTML(props) {
           content="width=device-width, initial-scale=1, shrink-to-fit=no"
         />
         {props.headComponents}
-      
       </head>
       <body {...props.bodyAttributes}>
         {props.preBodyComponents}
@@ -22,12 +21,11 @@ export default function HTML(props) {
           dangerouslySetInnerHTML={{ __html: props.body }}
         />
         {props.postBodyComponents}
-
         <script
           dangerouslySetInnerHTML={{
           __html: `
           IdealPostcodes.PostcodeLookup.setup({
-            apiKey: "ak_kt1m9kndpJwBiEP6CXPnLaPdfdoYH",
+            apiKey: "iddqd",
             context: "#postcode_lookup",
             outputFields: {
               line_1: "#line_1",

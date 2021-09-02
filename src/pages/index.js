@@ -1,7 +1,6 @@
 import * as React from "react"
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
-import { navigate } from "gatsby"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import FeatherIcon from "feather-icons-react"
@@ -18,7 +17,7 @@ const IndexPage = () => (
           <p>£billions can be claimed in 'Plevin' cases (also know as PPI2) after a landmark court ruling. <strong>Crucially, the PPI Deadline does NOT apply to these claims!</strong></p>
 
           <div className="section-start w-full rounded-md ">
-          <h1 className="text-center uppercase mb-1">Start your check today </h1>
+          <h1 className="text-center uppercase mb-1">Start your Free Plevin Check today</h1>
           <h3 className="text-center uppercase">Did you take out PPI?</h3>
 
           <div className="flex flex-wrap justify-center">
@@ -57,7 +56,7 @@ const IndexPage = () => (
       </div>
 
       <div className="section-grey w-full rounded-md grid grid-cols-4 gap-4 text-center">
-        <h1 className="col-span-4">How does the Plevin Free Check work?</h1>
+        <h1 className="col-span-4">How does the Free Plevin Check work?</h1>
         <div>
           <FeatherIcon icon="check" color="#7BAE7A" size="36" className="mb-2 mx-auto"/>
           <p className="text-sm mb-2"><strong>We offer this free check</strong> to assess whether there was an undisclosed commission on a PPI policy that you held, before you decide whether you wish to make a claim.</p>

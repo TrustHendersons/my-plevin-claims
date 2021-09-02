@@ -10,6 +10,7 @@
    setPostBodyComponents([
      <script
        key="https://cdn.jsdelivr.net/npm/@ideal-postcodes/postcode-lookup-bundled@2.0.0/dist/postcode-lookup.js"
+       type="text/javascript"
        src="https://cdn.jsdelivr.net/npm/@ideal-postcodes/postcode-lookup-bundled@2.0.0/dist/postcode-lookup.js"
      />,
    ])
