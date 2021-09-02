@@ -268,6 +268,20 @@ function Form1 ({
 
 
         </div>
+    
+        <div className="form-group flex align-items-center mt-4">
+              <div>
+                <label htmlFor="lastName" class="mr-2">Lender not listed?</label>
+                <input
+                  type="text"
+                  id="lender"                
+                  name="lender"
+                  placeholder="Add them here"   
+                  {...register("lastName", { required: true } )}              
+                />  
+              </div>  
+        </div>  
+    
     </div>
   );
 }
