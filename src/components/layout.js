@@ -62,7 +62,7 @@ const Layout = ({ children }) => {
                 </div>
               <div>
                 <Link className="m-2" to="/privacy/">Privacy Policy</Link>
-                <Link className="m-2" to="/terms/">Terms &amp; Conditions</Link>
+                <Link className="m-2" to="/terms-of-service/">Free Check Terms of Service</Link>
               </div>
             </div>
 
