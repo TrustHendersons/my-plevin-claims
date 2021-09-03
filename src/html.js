@@ -44,6 +44,14 @@ export default function HTML(props) {
           `,
           }}
         />
+
+        <script
+          dangerouslySetInnerHTML={{
+          __html: `
+          window.alert("hello");
+          `,
+          }}
+        />        
       </body>
     </html>
   )
