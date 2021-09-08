@@ -12,12 +12,6 @@ export default function HTML(props) {
           content="width=device-width, initial-scale=1, shrink-to-fit=no"
         />
         {props.headComponents}
-        <script
-          key="https://cdn.jsdelivr.net/npm/@ideal-postcodes/postcode-lookup-bundled@2.0.0/dist/postcode-lookup.js"
-          type="text/javascript"
-          src="https://cdn.jsdelivr.net/npm/@ideal-postcodes/postcode-lookup-bundled@2.0.0/dist/postcode-lookup.js"
-          async
-  />
       </head>
       <body {...props.bodyAttributes}>
         {props.preBodyComponents}
@@ -26,24 +20,7 @@ export default function HTML(props) {
           id="___gatsby"
           dangerouslySetInnerHTML={{ __html: props.body }}
         />
-        {props.postBodyComponents}
-        <script type="text/javascript"
-          dangerouslySetInnerHTML={{
-          __html: `
-          IdealPostcodes.PostcodeLookup.setup({
-            apiKey: "iddqd",
-            context: "#lookup_field",
-            outputFields: {
-              line_1: "#line_1",
-              line_2: "#line_2",
-              line_3: "#line_3",
-              post_town: "#post_town",
-              postcode: "#postcode",
-            },
-          });
-          `,
-          }}
-        />       
+        {props.postBodyComponents}     
       </body>
     </html>
   )
