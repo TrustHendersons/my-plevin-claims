@@ -1,6 +1,5 @@
 import * as React from "react"
 import PropTypes from "prop-types"
-import { Helmet } from "react-helmet"
 import { navigate } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 import FeatherIcon from "feather-icons-react"

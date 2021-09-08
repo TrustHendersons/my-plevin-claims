@@ -3,5 +3,3 @@
  *
  * See: https://www.gatsbyjs.com/docs/node-apis/
  */
-
-//gatsby-node.js

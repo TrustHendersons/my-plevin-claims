@@ -1,14 +1,12 @@
-import React, { useState } from "react";
+import React, {useEffect, createRef, useState} from "react";
 import { navigate } from "gatsby"
-import { Link } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
 import Layout from "../components/layout"
 import Form1 from "../components/Form1";
 import Form2 from "../components/Form2";
 import Form3 from "../components/Form3";
 import Form4 from "../components/Form4";
 import { useForm } from "react-hook-form";
-import { PostcodeLookup } from "@ideal-postcodes/postcode-lookup";
+
 
 function MainComponent() {
   const {
@@ -22,23 +20,6 @@ function MainComponent() {
     // You can set default values here
     defaultValues: {
 
-    }
-  });
-
-  PostcodeLookup.setup({
-    // *Required* Insert your API Key
-    apiKey: "iddqd",
-  
-    // *Required* Specify the target element with ID `postcode_lookup` to house the search tools
-    context: "#lookup_field",
-  
-    // Configures how address results are sent to inputs with IDs `line_1`, `line_2`, `line_3`, `post_town` and `postcode`.
-    outputFields: {
-      line_1: "#first_line",
-      line_2: "#second_line",
-      line_3: "#third_line",
-      post_town: "#post_town",
-      postcode: "#postcode",
     }
   });
 

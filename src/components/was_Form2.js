@@ -1,5 +1,5 @@
-import React, {useEffect, createRef, useState} from "react";
-import { PostcodeLookup } from "@ideal-postcodes/postcode-lookup";
+import React, {useEffect} from "react";
+
 
 function Form2({ 
   register,  
@@ -11,33 +11,6 @@ function Form2({
     const handleChange = e => {
     let isChecked = e.target.checked;
   };
-
-
-  const PostcodeLookupComponent = (props) => {
-    const context = createRef();
-  
-    useEffect(() => {
-      PostcodeLookup.setup({
-        apiKey: "iddqd",
-        context: context.current,
-        buttonStyle: {
-          backgroundColor: "green",
-          color: "white"
-        },
-        ...props
-      });
-    }, []);
-  
-    return <div ref={context}></div>;
-  };
-  
-    const [address, setAddress] = useState({
-      line_1: "",
-      line_2: "",
-      line_3: "",
-      post_town: "",
-      postcode: ""
-    });  
 
 
 
@@ -97,39 +70,49 @@ function Form2({
 
               <div className="mt-6">
 
-              <PostcodeLookupComponent onAddressSelected={setAddress} />
-                <label>Line 1</label>
-                <input
-                  type="text"
-                  value={address.line_1}
-                  onChange={(e) => setAddress({ ...address, line_1: e.target.value })}
-                />
-                <label>Line 2</label>
-                <input
-                  type="text"
-                  value={address.line_2}
-                  onChange={(e) => setAddress({ ...address, line_2: e.target.value })}
-                />
-                <label>Line 3</label>
-                <input
-                  type="text"
-                  value={address.line_3}
-                  onChange={(e) => setAddress({ ...address, line_3: e.target.value })}
-                />
-                <label>Post Town</label>
-                <input
-                  type="text"
-                  value={address.post_town}
-                  onChange={(e) => setAddress({ ...address, post_town: e.target.value })}
-                />
-                <label>Postcode</label>
-                <input
-                  type="text"
-                  value={address.postcode}
-                  onChange={(e) => setAddress({ ...address, postcode: e.target.value })}
-                />
+                  <div id="lookup_field" className="mr-2"></div>
 
-               </div> 
+                  <label>Address Line One</label>
+                  <input 
+                  className="p-2"
+                  id="first_line" 
+                  type="text" 
+                  name="address_line1"
+                  {...register("address_line1", { required: true } )}      
+                  />
+                  
+                  <label>Address Line Two</label>
+                  <input 
+                  id="second_line" 
+                  type="text" 
+                  name="address_line2"
+                  {...register("address_line2", { required: true } )}     
+                  />
+
+                  <label>Address Line Three</label>
+                  <input 
+                  id="third_line" 
+                  type="text" 
+                  name="address_line3"
+                  {...register("address_line3", { required: true } )}     
+                  />
+
+                  <label>Post Town</label>
+                  <input 
+                  id="post_town" 
+                  type="text" 
+                  name="post_town"
+                  {...register("post_town", { required: true } )}     
+                  />
+
+                  <label>Postcode</label>
+                  <input 
+                  id="postcode" 
+                  type="text" 
+                  name="postcode"
+                  {...register("postcode", { required: true } )}   
+                  />                                      
+              </div> 
 
               <div className="flex mt-6 col-span-2">
                 <p className="mr-2">Was this your address at the time you took out the PPI?</p>
