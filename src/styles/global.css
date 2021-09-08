@@ -80,7 +80,7 @@ h1, h2, h3, h4 {
 }
 
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-  color: #cdcdcd;
+  color: red;
   opacity: 1; /* Firefox */
 }
 
@@ -103,6 +103,20 @@ progress::-webkit-progress-bar {
 }
 progress::-webkit-progress-value {
   background-color: #7BAE7A;
+}
+
+/*--form --*/
+
+form input {
+  width: 100%;
+}
+
+.idpc-select {
+  margin-top: 1rem;
+}
+
+.idpc-input {
+  width: auto;
 }
 
 
@@ -131,7 +145,7 @@ ol ol > li:before {
     }
 
     .idpc-button {
-      @apply w-full bg-blue-500 text-white font-semibold shadow-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-opacity-75 font-bold p-2 uppercase border-gray-500 border-t border-b border-r;
+      @apply bg-blue-500 text-white font-semibold shadow-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-opacity-75 font-bold p-2 uppercase border-gray-500 border-t border-b border-r;
     }   
 
     .btn-blue-input {

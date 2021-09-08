@@ -1,5 +1,4 @@
 import React from "react";
-import { useForm } from "react-hook-form";
 
 function Form1 ({
   register,
@@ -277,7 +276,7 @@ function Form1 ({
                   id="lender"                
                   name="lender"
                   placeholder="Add them here"   
-                  {...register("lastName", { required: true } )}              
+                  {...register("lender", { required: true } )}              
                 />  
               </div>  
         </div>  

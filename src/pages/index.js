@@ -29,11 +29,11 @@ const IndexPage = () => (
 
           <div className="flex justify-center">
             <div className="flex w-50">
-            <FeatherIcon icon="star" color="#7BAE7A" size="36" className="mb-2 mx-auto"/>
-            <FeatherIcon icon="star" color="#7BAE7A" size="36" className="mb-2 mx-auto"/>
-            <FeatherIcon icon="star" color="#7BAE7A" size="36" className="mb-2 mx-auto"/>
-            <FeatherIcon icon="star" color="#7BAE7A" size="36" className="mb-2 mx-auto"/>
-            <FeatherIcon icon="star" color="#7BAE7A" size="36" className="mb-2 mx-auto"/>
+            <FeatherIcon icon="star" color="#7BAE7A" fill="#7BAE7A" size="36" className="mb-2 mx-auto"/>
+            <FeatherIcon icon="star" color="#7BAE7A" fill="#7BAE7A" size="36" className="mb-2 mx-auto"/>
+            <FeatherIcon icon="star" color="#7BAE7A" fill="#7BAE7A" size="36" className="mb-2 mx-auto"/>
+            <FeatherIcon icon="star" color="#7BAE7A" fill="#7BAE7A" size="36" className="mb-2 mx-auto"/>
+            <FeatherIcon icon="star" color="#7BAE7A" fill="#7BAE7A" size="36" className="mb-2 mx-auto"/>
             </div>
             <div className="ml-4 mt-1">
               <h3>CUSTOMER SATISFACTION</h3>

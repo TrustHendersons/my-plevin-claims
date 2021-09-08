@@ -4,6 +4,8 @@ import { PostcodeLookup } from "@ideal-postcodes/postcode-lookup";
 function Form2({ 
   register,  
   watch,
+  errors,
+  defaultValues,
   moreDetail,
   shouldDisplay
 }) {
@@ -32,9 +34,9 @@ function Form2({
   };
   
     const [address, setAddress] = useState({
-      line_1: "",
-      line_2: "",
-      line_3: "",
+      address_1: "",
+      address_2: "",
+      address_3: "",
       post_town: "",
       postcode: ""
     });  
@@ -48,18 +50,19 @@ function Form2({
         <h3 className="text-blue-dark mb-1">Please provide your details.</h3> 
         <p>This is so we can find your bank account with the lenders.</p>      
 
-          <div className="form-group grid grid-cols-2 grid-rows-none md:grid-cols-3 md:grid-rows-2 md:gap-2">
+          <div className="form-group flex grid grid-cols-none grid-rows-none md:grid-cols-2 md:grid-rows-1 gap-4 md:gap-x-20">
 
             <div>
-            <div className="mt-2">
-            <label htmlFor="title" class="mr-2">Title:</label> <br />
-              <select name="title"  {...register("title", { required: true } )}   >
-              <option value="title">Title</option>                  
-                <option value="mr">Mr</option>
-                <option value="mrs">Mrs</option>
-                <option value="miss">Miss</option>
-              </select>
-            </div>            
+
+              <div className="mt-2">
+                <label htmlFor="title" class="mr-2">Title:</label> <br />
+                <select name="title"  {...register("title", { required: true } )}   >
+                <option value="title">Title</option>                  
+                  <option value="mr">Mr</option>
+                  <option value="mrs">Mrs</option>
+                  <option value="miss">Miss</option>
+                </select>
+              </div>            
 
               <div className="mt-2">
                 <label htmlFor="name" class="mr-2">First Name:</label>
@@ -68,8 +71,10 @@ function Form2({
                   id="firstName"                
                   name="firstName"
                   placeholder="Enter your first name"  
-                  {...register("firstName", { required: true } )}            
+                  defaultValue={defaultValues && defaultValues.firstName}
+                  {...register("firstName", { required: true, maxLength: 20 })}       
                 /> 
+                {errors.firstName?.type === 'required' && "First name is required"}
               </div>
 
               <div className="mt-2">
@@ -79,8 +84,10 @@ function Form2({
                   id="lastName"                
                   name="lastName"
                   placeholder="Enter your last name"   
+                  defaultValue={defaultValues && defaultValues.lastName}
                   {...register("lastName", { required: true } )}              
                 />  
+                {errors.lastName?.type === 'required' && "Last name is required"}
               </div>    
 
               <div className="mt-2">
@@ -93,84 +100,101 @@ function Form2({
                 />  
               </div>   
 
-              </div> 
+            </div>  
 
-              <div className="mt-6">
+            <div>
+                <PostcodeLookupComponent onAddressSelected={setAddress} />
 
-              <PostcodeLookupComponent onAddressSelected={setAddress} />
-                <label>Line 1</label>
-                <input
-                  type="text"
-                  value={address.line_1}
-                  onChange={(e) => setAddress({ ...address, line_1: e.target.value })}
-                />
-                <label>Line 2</label>
-                <input
-                  type="text"
-                  value={address.line_2}
-                  onChange={(e) => setAddress({ ...address, line_2: e.target.value })}
-                />
-                <label>Line 3</label>
-                <input
-                  type="text"
-                  value={address.line_3}
-                  onChange={(e) => setAddress({ ...address, line_3: e.target.value })}
-                />
-                <label>Post Town</label>
-                <input
-                  type="text"
-                  value={address.post_town}
-                  onChange={(e) => setAddress({ ...address, post_town: e.target.value })}
-                />
-                <label>Postcode</label>
-                <input
-                  type="text"
-                  value={address.postcode}
-                  onChange={(e) => setAddress({ ...address, postcode: e.target.value })}
-                />
-
-               </div> 
-
-              <div className="flex mt-6 col-span-2">
-                <p className="mr-2">Was this your address at the time you took out the PPI?</p>
-                <input
-                    type="checkbox"
-                    id="PrevYes"
-                    name="PrevYes"
-                    value="yes" 
-                    isChecked
-                    onChange={handleChange}                            
-                    {...register('PrevYes')}             
+                <div className="mt-4">  
+                  <label class="mr-2">Line 1</label>
+                  <input
+                    type="text"
+                    value={address.line_1}
+                    onChange={(e) => setAddress({ ...address, line_1: e.target.value })}
+                    {...register("address_line1", { required: true } )}      
                   />
-                  <label htmlFor="prevYes" className="mx-2">Yes</label>   
-                  <input 
-                    type="checkbox"
-                    id="PrevNo"
-                    name="PrevNo"
-                    value="yes" 
-                    isChecked
-                    onChange={handleChange}                    
-                    {...register('PrevNo')}                    
-                   />
-                  <label htmlFor="prevNo" className="mx-2">No</label>   
                 </div>
-                
-                <div>
-                {moreDetail && (
-                  <div className="col-span-2 mt-2">
-                    <input
-                      type="text"
-                      id="prevAddress"                
-                      name="prevAddress"
-                      onChange={handleChange}   
-                      placeholder="Enter your previous address"   
-                      {...register("prevAddress", { required: true } )}              
-                    />                        
+
+                <div className="mt-4">  
+                  <label class="mr-2">Line 2</label>
+                  <input
+                    type="text"
+                    value={address.line_2}
+                    onChange={(e) => setAddress({ ...address, line_2: e.target.value })}
+                    {...register("address_line2", { required: true } )}     
+                  />
+                </div>
+
+                <div className="mt-4">  
+                  <label class="mr-2">Line 3</label>
+                  <input
+                    type="text"
+                    value={address.line_3}
+                    onChange={(e) => setAddress({ ...address, line_3: e.target.value })}
+                    {...register("address_line3", { required: true } )}   
+                  />
+                </div>
+
+                <div className="mt-4">  
+                  <label class="mr-2">Post Town</label>
+                  <input
+                    type="text"
+                    value={address.post_town}
+                    onChange={(e) => setAddress({ ...address, post_town: e.target.value })}
+                    {...register("post_town", { required: true } )}     
+                  />
+                </div>
+
+                <div className="mt-4">  
+                  <label class="mr-2">Postcode</label>
+                  <input
+                    type="text"
+                    value={address.postcode}
+                    onChange={(e) => setAddress({ ...address, postcode: e.target.value })}
+                    {...register("postcode", { required: true } )}   
+                  />
+                </div>
+
+                <div className="flex mt-6 col-span-2">
+                  <p className="mr-2">Was this your address at the time you took out the PPI?</p>
+                  <input
+                      type="checkbox"
+                      id="PrevYes"
+                      name="PrevYes"
+                      value="yes" 
+                      isChecked
+                      onChange={handleChange}                            
+                      {...register('PrevYes')}             
+                    />
+                    <label htmlFor="prevYes" className="mx-2">Yes</label>   
+                    <input 
+                      type="checkbox"
+                      id="PrevNo"
+                      name="PrevNo"
+                      value="yes" 
+                      isChecked
+                      onChange={handleChange}                    
+                      {...register('PrevNo')}                    
+                    />
+                    <label htmlFor="prevNo" className="mx-2">No</label>   
                   </div>
+                
+                  <div>
+                  {moreDetail && (
+                    <div className="col-span-2 mt-2">
+                      <input
+                        type="text"
+                        id="prevAddress"                
+                        name="prevAddress"
+                        onChange={handleChange}   
+                        placeholder="Enter your previous address"   
+                        {...register("prevAddress", { required: true } )}              
+                      />                        
+                    </div>
                 )}
 
               </div>
-
+            </div>          
           </div>
     </div>
   );

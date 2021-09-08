@@ -11,9 +11,8 @@ import { useForm } from "react-hook-form";
 function MainComponent() {
   const {
     register,
-    triggerValidation,
-    defaultValues,
-    errors,
+    trigger,
+    formState: { errors },
     watch,
     getValues
   } = useForm({
@@ -22,6 +21,15 @@ function MainComponent() {
 
     }
   });
+
+  const [defaultValues, setDefaultValues] = useState({});
+  const [show_input, setshow_input] = useState(false);
+  const createInput = () => {
+    setshow_input(true);
+  };
+  const auto_text = () => {
+    setshow_input(false);
+  };
 
   const encode = (data) => {
     return Object.keys(data)
@@ -35,12 +43,10 @@ function MainComponent() {
 
   const forms = [
     {
-      fields: ["uname", "email", "password"],
-      component: (register, errors) => (
+      fields: show_input ? ["uname", "email", "password"] : ["uname", "email"],
+      component: (register, errors, defaultValues) => (
         <Form1
-          // a key is needed to render a list
           key={0}
-          // this will be used to set the css display property to block or none on each form
           shouldDisplay={currentForm === 0}
           register={register}
           errors={errors}
@@ -48,8 +54,8 @@ function MainComponent() {
       )
     },
     {
-      fields: ["lname"],
-      component: (register, errors) => (
+      fields: show_input ? ["firstName", "lastName"] : ["firstName", "lastName"],
+      component: (register, errors, defaultValues) => (
         <Form2
           key={1}
           shouldDisplay={currentForm === 1}
@@ -132,7 +138,7 @@ function MainComponent() {
           data-netlify-honeypot="bot-field"           
         >  
           <input type="hidden" name="form-name" value="contact" />     
-          {forms.map(form => form.component(register, errors))}
+          {forms.map(form => form.component(register, errors, defaultValues))}
         </form>
 
         {prevButton && (
