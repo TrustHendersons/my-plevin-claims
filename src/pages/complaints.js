@@ -2,13 +2,13 @@ import * as React from "react"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 
-const PrivacyPage = () => (
+const ComplaintsPage = () => (
   <Layout>
     <Seo title="Home" />
 
 <div className="grid grid-cols-0 gap-2">
 
-    <h1 class="display-1">Privacy Policy</h1>
+    <h1 class="display-1">Complaints</h1>
     <hr />
         <p>We pride ourselves in continually acting in the best interests of our clients. We do however
 understand that there are instances when a client may feel that they have cause to complain.</p>
@@ -73,4 +73,4 @@ E14 9SR
 </Layout>
 )
 
-export default PrivacyPage
+export default ComplaintsPage
