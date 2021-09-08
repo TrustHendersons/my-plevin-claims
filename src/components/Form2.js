@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-import {Helmet} from "react-helmet";
+import React, {useEffect} from "react";
+
 
 function Form2({ 
   register,  
@@ -16,17 +16,15 @@ function Form2({
 
   return (
 
-
-    
-
     <div style={{ display: shouldDisplay ? "block" : "none" }}>
 
         <h3 className="text-blue-dark mb-1">Please provide your details.</h3> 
         <p>This is so we can find your bank account with the lenders.</p>      
 
-          <div className="form-group grid grid-cols-1 grid-rows-none md:grid-cols-3 md:grid-rows-2 md:gap-2">
+          <div className="form-group grid grid-cols-2 grid-rows-none md:grid-cols-3 md:grid-rows-2 md:gap-2">
 
             <div>
+            <div className="mt-2">
             <label htmlFor="title" class="mr-2">Title:</label> <br />
               <select name="title"  {...register("title", { required: true } )}   >
               <option value="title">Title</option>                  
@@ -36,7 +34,7 @@ function Form2({
               </select>
             </div>            
 
-              <div>
+              <div className="mt-2">
                 <label htmlFor="name" class="mr-2">First Name:</label>
                 <input
                   type="text"
@@ -47,7 +45,7 @@ function Form2({
                 /> 
               </div>
 
-              <div>
+              <div className="mt-2">
                 <label htmlFor="lastName" class="mr-2">Last Name:</label>
                 <input
                   type="text"
@@ -58,7 +56,7 @@ function Form2({
                 />  
               </div>    
 
-              <div>
+              <div className="mt-2">
                 <label htmlFor="dob"  class="mr-2">Date of Birth:</label>
                 <input   
                   type="date"
@@ -66,26 +64,54 @@ function Form2({
                   name="dob" 
                   {...register("dob", { required: true } )}                                     
                 />  
-              </div>    
+              </div>   
 
-              <div className="flex mt-6 col-span-2">
+              </div> 
 
-                  <div id="postcode_lookup"></div>
+              <div className="mt-6">
+
+                  <div id="lookup_field" className="mr-2"></div>
 
                   <label>Address Line One</label>
-                  <input id="first_line" type="text" />
+                  <input 
+                  className="p-2"
+                  id="first_line" 
+                  type="text" 
+                  name="address_line1"
+                  {...register("address_line1", { required: true } )}      
+                  />
                   
                   <label>Address Line Two</label>
-                  <input id="second_line" type="text" />
+                  <input 
+                  id="second_line" 
+                  type="text" 
+                  name="address_line2"
+                  {...register("address_line2", { required: true } )}     
+                  />
 
                   <label>Address Line Three</label>
-                  <input id="third_line" type="text" />
+                  <input 
+                  id="third_line" 
+                  type="text" 
+                  name="address_line3"
+                  {...register("address_line3", { required: true } )}     
+                  />
 
                   <label>Post Town</label>
-                  <input id="post_town" type="text" />
+                  <input 
+                  id="post_town" 
+                  type="text" 
+                  name="post_town"
+                  {...register("post_town", { required: true } )}     
+                  />
 
                   <label>Postcode</label>
-                  <input id="postcode" type="text" />                                      
+                  <input 
+                  id="postcode" 
+                  type="text" 
+                  name="postcode"
+                  {...register("postcode", { required: true } )}   
+                  />                                      
               </div> 
 
               <div className="flex mt-6 col-span-2">
@@ -132,5 +158,4 @@ function Form2({
     </div>
   );
 }
-
 export default Form2;

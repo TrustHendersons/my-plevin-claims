@@ -27,12 +27,12 @@ export default function HTML(props) {
           dangerouslySetInnerHTML={{ __html: props.body }}
         />
         {props.postBodyComponents}
-        <script
+        <script type="text/javascript"
           dangerouslySetInnerHTML={{
           __html: `
           IdealPostcodes.PostcodeLookup.setup({
             apiKey: "iddqd",
-            context: "#postcode_lookup",
+            context: "#lookup_field",
             outputFields: {
               line_1: "#line_1",
               line_2: "#line_2",
@@ -43,15 +43,7 @@ export default function HTML(props) {
           });
           `,
           }}
-        />
-
-        <script
-          dangerouslySetInnerHTML={{
-          __html: `
-          window.alert("hello");
-          `,
-          }}
-        />        
+        />       
       </body>
     </html>
   )

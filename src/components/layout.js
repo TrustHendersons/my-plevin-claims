@@ -6,6 +6,7 @@ import Header from "./header"
 import "./layout.css"
 import FeatherIcon from "feather-icons-react"
 
+
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
@@ -21,6 +22,7 @@ const Layout = ({ children }) => {
 
   return (
     <>
+  
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
 
         <main class="flex-grow">

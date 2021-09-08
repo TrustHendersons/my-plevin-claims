@@ -281,26 +281,6 @@ function Form1 ({
                 />  
               </div>  
         </div>  
-
-        <div className="flex mt-6 col-span-2">
-
-        <div id="postcode_lookup"></div>
-
-        <label>Address Line One</label>
-        <input id="first_line" type="text" />
-
-        <label>Address Line Two</label>
-        <input id="second_line" type="text" />
-
-        <label>Address Line Three</label>
-        <input id="third_line" type="text" />
-
-        <label>Post Town</label>
-        <input id="post_town" type="text" />
-
-        <label>Postcode</label>
-        <input id="postcode" type="text" />                                      
-        </div>         
     
     </div>
   );
