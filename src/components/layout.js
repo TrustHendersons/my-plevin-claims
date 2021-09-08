@@ -31,7 +31,7 @@ const Layout = ({ children }) => {
           </div>  
         </main>
 
-     {/*    <div className="subfooter">
+         <div className="subfooter">
           <div className="container">    
             <div className="grid grid-cols-1 md:grid-cols-3 justify-items-center gap-4 text-center">
               <div>
@@ -65,13 +65,14 @@ const Layout = ({ children }) => {
               <div>
                 <Link className="m-2" to="/privacy/">Privacy Policy</Link>
                 <Link className="m-2" to="/terms-of-service/">Free Check Terms of Service</Link>
+                <Link className="m-2" to="/complaints/">Complaints</Link>
               </div>
             </div>
 
             <hr className="my-4"/>
             <p className="text-xs text-center">My Plevin Claims is a trading style of Henderson Claims Limited. Henderson Claims Limited is authorised and regulated by the Financial Conduct Authority with reference number FRN:836041. Henderson Claims Limited is a Claims Management Company (CMC). Registered with the Information Commissioners Office: registration number ZA147049. Registered address: Unit 2, Ashbrook Office Park, Manchester, M22 5LB. Registered in England and Wales, Company number 7646017. VAT number: 240 8769 88.</p>
           </div>
-      </footer> */}
+      </footer>
     </>
   )
 }

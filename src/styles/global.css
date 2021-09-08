@@ -7,6 +7,19 @@ body {
   background: #eeeeee; 
 }
 
+p {
+  margin-bottom: 1rem;
+}
+
+a {
+  color: #7BAE7A;
+}
+
+a:hover {
+  color: #394053;
+}
+
+
 /*--- sticky footer ---*/
 #gatsby-focus-wrapper, #___gatsby {
   display: flex;

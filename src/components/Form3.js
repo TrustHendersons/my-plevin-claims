@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "gatsby"
 
 function Form3({ register, shouldDisplay }) {
   return (
@@ -42,7 +43,7 @@ function Form3({ register, shouldDisplay }) {
               value="yes"                
               {...register("privacy", { required: true } )}   
             />
-          <label htmlFor="privacy" className="mr-2 text-sm">I have read and understood the Privacy Policy and agree to be contacted using the details supplied.</label>               
+          <label htmlFor="privacy" className="mr-2 text-sm">I have read and understood the <Link to="/privacy/">Privacy Policy</Link> and agree to be contacted using the details supplied.</label>               
         </div>                                       
 
         </div>
