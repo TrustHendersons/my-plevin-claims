@@ -53,7 +53,6 @@ function MainComponent() {
           register={register}
           errors={errors}
           defaultValues={defaultValues}
-          resolver={yupResolver(currentValidationSchema)}
         />
       )
     },
