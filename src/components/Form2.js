@@ -20,7 +20,7 @@ function Form2({
   
     useEffect(() => {
       PostcodeLookup.setup({
-        apiKey: "iddqd",
+        apiKey: "ak_kt1m9kndpJwBiEP6CXPnLaPdfdoYH",
         context: context.current,
         buttonStyle: {
           backgroundColor: "green",
