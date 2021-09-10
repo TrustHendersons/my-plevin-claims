@@ -18,7 +18,6 @@ function MainComponent() {
     watch,
     getValues
   } = useForm({
-    resolver: yupResolver(currentValidationSchema),
     // You can set default values here
     defaultValues: {
       address_line1: "Your Street"
