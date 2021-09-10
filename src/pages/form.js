@@ -24,23 +24,6 @@ function MainComponent() {
     }
   });
 
-  const validationSchema = [
-    //validation for step1
-    yup.object({
-      firstName: yup.string().required(),
-      lender: yup.string().required()
-    }),
-    //validation for step2
-    yup.object({
-      address: yup.string().required()
-    }),
-    //validation for step3
-    yup.object({
-      job: yup.string().required()
-    })
-  ];
-  const currentValidationSchema = validationSchema[currentForm];
-
   const [defaultValues, setDefaultValues] = useState({});
   const [show_input, setshow_input] = useState(false);
   const createInput = () => {
