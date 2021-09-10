@@ -34,11 +34,11 @@ function Form2({
   };
   
     const [address, setAddress] = useState({
-      address_1: "",
-      address_2: "",
-      address_3: "",
+      line_1: "",
+      line_2: "",
+      line_3: "",
       post_town: "",
-      postcode: ""
+      postcode: "",
     });  
 
 
@@ -109,9 +109,11 @@ function Form2({
                   <label class="mr-2">Line 1</label>
                   <input
                     type="text"
+                    name="address_line1"
                     value={address.line_1}
                     onChange={(e) => setAddress({ ...address, line_1: e.target.value })}
-                    {...register("address_line1", { required: true } )}      
+                    defaultValue={defaultValues && defaultValues.address_line1}
+                    {...register("address_line1", { required: true } )}    
                   />
                 </div>
 
@@ -119,8 +121,10 @@ function Form2({
                   <label class="mr-2">Line 2</label>
                   <input
                     type="text"
+                    name="address_line2"
                     value={address.line_2}
                     onChange={(e) => setAddress({ ...address, line_2: e.target.value })}
+                    defaultValue={defaultValues && defaultValues.address_line2}
                     {...register("address_line2", { required: true } )}     
                   />
                 </div>
@@ -129,8 +133,10 @@ function Form2({
                   <label class="mr-2">Line 3</label>
                   <input
                     type="text"
+                    name="address_line3"
                     value={address.line_3}
                     onChange={(e) => setAddress({ ...address, line_3: e.target.value })}
+                    defaultValue={defaultValues && defaultValues.address_line3}
                     {...register("address_line3", { required: true } )}   
                   />
                 </div>
@@ -139,8 +145,10 @@ function Form2({
                   <label class="mr-2">Post Town</label>
                   <input
                     type="text"
+                    name="post_town"
                     value={address.post_town}
                     onChange={(e) => setAddress({ ...address, post_town: e.target.value })}
+                    defaultValue={defaultValues && defaultValues.post_town}
                     {...register("post_town", { required: true } )}     
                   />
                 </div>
@@ -149,8 +157,10 @@ function Form2({
                   <label class="mr-2">Postcode</label>
                   <input
                     type="text"
+                    name="postcode"
                     value={address.postcode}
                     onChange={(e) => setAddress({ ...address, postcode: e.target.value })}
+                    defaultValue={defaultValues && defaultValues.postcode}
                     {...register("postcode", { required: true } )}   
                   />
                 </div>

@@ -8,9 +8,9 @@ function Form4({ values, shouldDisplay }) {
 
       <h3>Form Results:</h3>
       <div className="grid grid-cols-3">
-      {Object.entries(values).map(([key, value]) => (
+      {Object.entries(values).map(([key, values]) => (
         <p key={key}>
-          {key}: {value}
+          {key}: {values}
         </p>
  
       ))}

@@ -3,6 +3,7 @@ import React from "react";
 function Form1 ({
   register,
   shouldDisplay,
+  defaultValues,
   isChecked
 }) {
 
@@ -267,10 +268,10 @@ function Form1 ({
 
 
         </div>
-    
+         
         <div className="form-group flex align-items-center mt-4">
               <div>
-                <label htmlFor="lastName" class="mr-2">Lender not listed?</label>
+                <label htmlFor="lender" class="mr-2">Lender not listed?</label>
                 <input
                   type="text"
                   id="lender"                

@@ -6,6 +6,8 @@ import Form2 from "../components/Form2";
 import Form3 from "../components/Form3";
 import Form4 from "../components/Form4";
 import { useForm } from "react-hook-form";
+import * as yup from "yup";
+import { yupResolver } from "@hookform/resolvers/yup";
 
 
 function MainComponent() {
@@ -16,11 +18,29 @@ function MainComponent() {
     watch,
     getValues
   } = useForm({
+    resolver: yupResolver(currentValidationSchema),
     // You can set default values here
     defaultValues: {
-
+      address_line1: "Your Street"
     }
   });
+
+  const validationSchema = [
+    //validation for step1
+    yup.object({
+      firstName: yup.string().required(),
+      lender: yup.string().required()
+    }),
+    //validation for step2
+    yup.object({
+      address: yup.string().required()
+    }),
+    //validation for step3
+    yup.object({
+      job: yup.string().required()
+    })
+  ];
+  const currentValidationSchema = validationSchema[currentForm];
 
   const [defaultValues, setDefaultValues] = useState({});
   const [show_input, setshow_input] = useState(false);
@@ -43,13 +63,15 @@ function MainComponent() {
 
   const forms = [
     {
-      fields: show_input ? ["uname", "email", "password"] : ["uname", "email"],
+      fields: show_input ? ["firstName", "lender"] : ["firstName", "lender"],
       component: (register, errors, defaultValues) => (
         <Form1
           key={0}
           shouldDisplay={currentForm === 0}
           register={register}
           errors={errors}
+          defaultValues={defaultValues}
+          resolver={yupResolver(currentValidationSchema)}
         />
       )
     },
@@ -61,6 +83,7 @@ function MainComponent() {
           shouldDisplay={currentForm === 1}
           register={register}  
           errors={errors} 
+          defaultValues={defaultValues}
           watch={watch} 
           moreDetail={moreDetail}             
         />
@@ -68,11 +91,12 @@ function MainComponent() {
     },
     {
       fields: ["email"],
-      component: (register, errors) => (
+      component: (register, errors, defaultValues) => (
         <Form3
           key={2}
           shouldDisplay={currentForm === 2}
           register={register}  
+          defaultValues={defaultValues}
           errors={errors}
           values={getValues()}
         />
@@ -97,7 +121,13 @@ function MainComponent() {
 
   const moveToNext = () => {
       setCurrentForm(currentForm + 1);
+      register();
   };
+
+  {/*  const moveToNext = () => {
+    const isStepValid = trigger();
+    if (isStepValid) setCurrentForm(currentForm + 1);
+  };*/} 
 
   const prevButton = currentForm !== 0;
   const nextButton = currentForm !== forms.length - 1;
