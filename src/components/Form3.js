@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "gatsby"
 
-function Form3({ register, shouldDisplay }) {
+function Form3({ register, errors, shouldDisplay }) {
   return (
 
     <div style={{ display: shouldDisplay ? "block" : "none" }}>
@@ -20,6 +20,7 @@ function Form3({ register, shouldDisplay }) {
           placeholder="Enter your email"                
           {...register("email", { required: true } )}   
         />  
+          {errors.email?.type === 'required' && "Email is required"}
         </div> 
 
         <div>
@@ -30,8 +31,8 @@ function Form3({ register, shouldDisplay }) {
           name="tel"
           placeholder="Enter your number"                
           {...register("tel", { required: true } )}   
-
         />  
+          {errors.tel?.type === 'required' && "Phone number is required"}
         </div>  
 
         <div className="col-span-2 flex items-center">
@@ -44,6 +45,7 @@ function Form3({ register, shouldDisplay }) {
               {...register("privacy", { required: true } )}   
             />
           <label htmlFor="privacy" className="mr-2 text-sm">I have read and understood the <Link to="/privacy/">Privacy Policy</Link> and agree to be contacted using the details supplied.</label>               
+          {errors.privacy?.type === 'required' && "You must check this"}
         </div>                                       
 
         </div>

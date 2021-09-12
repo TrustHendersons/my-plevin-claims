@@ -2,6 +2,7 @@ import React from "react";
 
 function Form1 ({
   register,
+  errors,
   shouldDisplay,
   defaultValues,
   isChecked
@@ -16,6 +17,8 @@ function Form1 ({
 
         <h3 className="blue-dark mb-1">Please select all the banks you had PPI with:</h3> 
         <p>(you can select multiple banks, this could mean you have more claims)</p>
+
+{/*
 
         <div className="form-group grid grid-cols-2 md:grid-cols-3 gap-4 align-items-center">
               <div> 
@@ -268,7 +271,22 @@ function Form1 ({
 
 
         </div>
-         
+*/}        
+        <div className="form-group flex align-items-center mt-4">
+              <div>
+                <label htmlFor="name" class="mr-2">Lender not listed?</label>
+                <input
+                  type="text"
+                  id="name"                
+                  name="name"
+                  placeholder="name"   
+                  defaultValue={defaultValues && defaultValues.name}
+                  {...register("name", { required: true } )}              
+                />  
+                {errors.name?.type === 'required' && "name is required"}
+              </div>  
+        </div>  
+
         <div className="form-group flex align-items-center mt-4">
               <div>
                 <label htmlFor="lender" class="mr-2">Lender not listed?</label>
@@ -277,10 +295,12 @@ function Form1 ({
                   id="lender"                
                   name="lender"
                   placeholder="Add them here"   
+                  defaultValue={defaultValues && defaultValues.lender}
                   {...register("lender", { required: true } )}              
                 />  
+                 {errors.lender?.type === 'required' && "lender is required"}
               </div>  
-        </div>  
+        </div>          
     
     </div>
   );

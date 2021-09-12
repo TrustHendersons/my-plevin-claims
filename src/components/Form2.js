@@ -6,14 +6,8 @@ function Form2({
   watch,
   errors,
   defaultValues,
-  moreDetail,
   shouldDisplay
 }) {
-
-    const handleChange = e => {
-    let isChecked = e.target.checked;
-  };
-
 
   const PostcodeLookupComponent = (props) => {
     const context = createRef();
@@ -22,6 +16,13 @@ function Form2({
       PostcodeLookup.setup({
         apiKey: "ak_kt1m9kndpJwBiEP6CXPnLaPdfdoYH",
         context: context.current,
+        outputFields: {
+              line_1: '#address_line1',  
+              line_2: '#address_line2',         
+              line_3: '#address_line3',
+              post_town: '#post_town',
+             postcode: '#postcode'
+           },
         buttonStyle: {
           backgroundColor: "green",
           color: "white"
@@ -32,14 +33,23 @@ function Form2({
   
     return <div ref={context}></div>;
   };
-  
-    const [address, setAddress] = useState({
-      line_1: "",
-      line_2: "",
-      line_3: "",
-      post_town: "",
-      postcode: "",
-    });  
+
+
+   {/*    
+    const [touched, setTouched] = useState([]);
+
+ } const handleChange = (event) => {
+      setValues({
+        ...values,
+        [event.target.name]: event.target.value
+      });
+      if (!touched.includes(event.target.name)) { // NEW
+        setTouched([
+          ...touched,
+          event.target.name
+        ])
+      }
+    }  */}
 
 
 
@@ -96,24 +106,24 @@ function Form2({
                   type="date"
                   id="dob"                
                   name="dob" 
+                  defaultValue={defaultValues && defaultValues.dob}
                   {...register("dob", { required: true } )}                                     
                 />  
+                {errors.dob?.type === 'required' && "Date of birth is required"}
               </div>   
 
             </div>  
 
             <div>
-                <PostcodeLookupComponent onAddressSelected={setAddress} />
+                <PostcodeLookupComponent/>
 
                 <div className="mt-4">  
-                  <label class="mr-2">Line 1</label>
+                  <label htmlFor="address_line1" class="mr-2">Line 1</label>
                   <input
                     type="text"
+                    id="address_line1"
                     name="address_line1"
-                    value={address.line_1}
-                    onChange={(e) => setAddress({ ...address, line_1: e.target.value })}
-                    defaultValue={defaultValues && defaultValues.address_line1}
-                    {...register("address_line1", { required: true } )}    
+                    {...register("address_line1", { required: true } )}   
                   />
                 </div>
 
@@ -121,10 +131,8 @@ function Form2({
                   <label class="mr-2">Line 2</label>
                   <input
                     type="text"
+                    id="address_line2"
                     name="address_line2"
-                    value={address.line_2}
-                    onChange={(e) => setAddress({ ...address, line_2: e.target.value })}
-                    defaultValue={defaultValues && defaultValues.address_line2}
                     {...register("address_line2", { required: true } )}     
                   />
                 </div>
@@ -133,10 +141,8 @@ function Form2({
                   <label class="mr-2">Line 3</label>
                   <input
                     type="text"
+                    id="address_line3"
                     name="address_line3"
-                    value={address.line_3}
-                    onChange={(e) => setAddress({ ...address, line_3: e.target.value })}
-                    defaultValue={defaultValues && defaultValues.address_line3}
                     {...register("address_line3", { required: true } )}   
                   />
                 </div>
@@ -145,10 +151,8 @@ function Form2({
                   <label class="mr-2">Post Town</label>
                   <input
                     type="text"
+                    id="post_town"
                     name="post_town"
-                    value={address.post_town}
-                    onChange={(e) => setAddress({ ...address, post_town: e.target.value })}
-                    defaultValue={defaultValues && defaultValues.post_town}
                     {...register("post_town", { required: true } )}     
                   />
                 </div>
@@ -157,10 +161,8 @@ function Form2({
                   <label class="mr-2">Postcode</label>
                   <input
                     type="text"
+                    id="postcode"
                     name="postcode"
-                    value={address.postcode}
-                    onChange={(e) => setAddress({ ...address, postcode: e.target.value })}
-                    defaultValue={defaultValues && defaultValues.postcode}
                     {...register("postcode", { required: true } )}   
                   />
                 </div>
@@ -172,8 +174,7 @@ function Form2({
                       id="PrevYes"
                       name="PrevYes"
                       value="yes" 
-                      isChecked
-                      onChange={handleChange}                            
+                      isChecked                         
                       {...register('PrevYes')}             
                     />
                     <label htmlFor="prevYes" className="mx-2">Yes</label>   
@@ -182,26 +183,13 @@ function Form2({
                       id="PrevNo"
                       name="PrevNo"
                       value="yes" 
-                      isChecked
-                      onChange={handleChange}                    
+                      isChecked                 
                       {...register('PrevNo')}                    
                     />
                     <label htmlFor="prevNo" className="mx-2">No</label>   
                   </div>
                 
                   <div>
-                  {moreDetail && (
-                    <div className="col-span-2 mt-2">
-                      <input
-                        type="text"
-                        id="prevAddress"                
-                        name="prevAddress"
-                        onChange={handleChange}   
-                        placeholder="Enter your previous address"   
-                        {...register("prevAddress", { required: true } )}              
-                      />                        
-                    </div>
-                )}
 
               </div>
             </div>          

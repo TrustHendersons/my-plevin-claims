@@ -18,20 +18,16 @@ function MainComponent() {
     watch,
     getValues
   } = useForm({
+    mode: "onChange",
     // You can set default values here
     defaultValues: {
-      address_line1: "Your Street"
+
     }
   });
 
+  const watchAllFields = watch();
+
   const [defaultValues, setDefaultValues] = useState({});
-  const [show_input, setshow_input] = useState(false);
-  const createInput = () => {
-    setshow_input(true);
-  };
-  const auto_text = () => {
-    setshow_input(false);
-  };
 
   const encode = (data) => {
     return Object.keys(data)
@@ -41,43 +37,38 @@ function MainComponent() {
 
   const [currentForm, setCurrentForm] = useState(0);
 
-  const moreDetail = watch("PrevNo");
-
   const forms = [
     {
-      fields: show_input ? ["firstName", "lender"] : ["firstName", "lender"],
-      component: (register, errors, defaultValues) => (
+      fields: ["name", "lender"],
+      component: (register, errors) => (
         <Form1
           key={0}
           shouldDisplay={currentForm === 0}
+          defaultValues={defaultValues}
           register={register}
           errors={errors}
-          defaultValues={defaultValues}
         />
       )
     },
     {
-      fields: show_input ? ["firstName", "lastName"] : ["firstName", "lastName"],
-      component: (register, errors, defaultValues) => (
+      fields: ["firstName", "lastName", "dob"],
+      component: (register, errors) => (
         <Form2
           key={1}
           shouldDisplay={currentForm === 1}
-          register={register}  
-          errors={errors} 
           defaultValues={defaultValues}
-          watch={watch} 
-          moreDetail={moreDetail}             
+          register={register}  
+          errors={errors}         
         />
       )
     },
     {
-      fields: ["email"],
-      component: (register, errors, defaultValues) => (
+      fields: ["email", "tel", "privacy"],
+      component: (register, errors) => (
         <Form3
           key={2}
           shouldDisplay={currentForm === 2}
           register={register}  
-          defaultValues={defaultValues}
           errors={errors}
           values={getValues()}
         />
@@ -101,8 +92,10 @@ function MainComponent() {
   };
 
   const moveToNext = () => {
-      setCurrentForm(currentForm + 1);
-      register();
+    setDefaultValues(prev => ({ ...prev, ...getValues() }));
+    trigger(forms[currentForm].fields).then(valid => {
+      if (valid) setCurrentForm(currentForm + 1);
+    });
   };
 
   {/*  const moveToNext = () => {
