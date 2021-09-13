@@ -39,7 +39,7 @@ function MainComponent() {
 
   const forms = [
     {
-      fields: ["name", "lender"],
+      fields: ["lenders"],
       component: (register, errors) => (
         <Form1
           key={0}

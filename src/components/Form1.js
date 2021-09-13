@@ -18,287 +18,310 @@ function Form1 ({
         <h3 className="blue-dark mb-1">Please select all the banks you had PPI with:</h3> 
         <p>(you can select multiple banks, this could mean you have more claims)</p>
 
-{/*
 
         <div className="form-group grid grid-cols-2 md:grid-cols-3 gap-4 align-items-center">
+
               <div> 
-                <input
-                    type="checkbox"
-                    id="lloyds"
-                    name="lloyds"
-                    value="yes" 
-                    isChecked
-                    onChange={handleChange}                    
-                    {...register('lloyds')}             
-                  />
-                <label htmlFor="lloyds" className="ml-2">Lloyds</label>                      
+                <label>
+                  <input
+                      className="mr-2"
+                      type="checkbox"
+                      name="lenders"
+                      value="Lloyds, " 
+                      onChange={handleChange}
+                      {...register("lenders", { required: true } )}             
+                    />
+                  Lloyds</label>                      
               </div>  
 
-              <div>
-                <input
-                    type="checkbox"
-                    id="barclays"                    
-                    name="barclays"
-                    value="yes"                
-                    {...register('barclays')}       
-                  />   
-                <label htmlFor="barclays" className="ml-2">Barclays</label>                  
-              </div> 
+              <div> 
+                <label>
+                  <input
+                      className="mr-2"
+                      type="checkbox"
+                      name="lenders"
+                      value="Barclays, " 
+                      onChange={handleChange}
+                      {...register("lenders", { required: true } )}             
+                    />
+                  Barclays</label>                      
+              </div>  
 
-              <div>
-                <input
-                    type="checkbox"
-                    id="barclaycard"                    
-                    name="barclaycard"
-                    value="yes"                
-                    {...register('barclaycard')}       
-                  />   
-                <label htmlFor="barclaycard" className="ml-2">Barclaycard</label>                  
+              <div> 
+                <label>
+                  <input
+                      className="mr-2"
+                      type="checkbox"
+                      name="lenders"
+                      value="Barclaycard, " 
+                      onChange={handleChange}
+                      {...register("lenders", { required: true } )}             
+                    />
+                  Barclaycard</label>                      
+              </div>    
+
+              <div> 
+                <label>
+                  <input
+                      className="mr-2"
+                      type="checkbox"
+                      name="lenders"
+                      value="Natwest, " 
+                      onChange={handleChange}
+                      {...register("lenders", { required: true } )}             
+                    />
+                  Natwest</label>                      
+              </div>   
+              
+              <div> 
+                <label>
+                  <input
+                      className="mr-2"
+                      type="checkbox"
+                      name="lenders"
+                      value="RBS, " 
+                      onChange={handleChange}
+                      {...register("lenders", { required: true } )}             
+                    />
+                  RBS</label>                      
+              </div>   
+              
+              <div> 
+                <label>
+                  <input
+                      className="mr-2"
+                      type="checkbox"
+                      name="lenders"
+                      value="TSB, " 
+                      onChange={handleChange}
+                      {...register("lenders", { required: true } )}             
+                    />
+                  TSB</label>                      
+              </div>   
+
+              <div> 
+                <label>
+                  <input
+                      className="mr-2"
+                      type="checkbox"
+                      name="lenders"
+                      value="Halifax, " 
+                      onChange={handleChange}
+                      {...register("lenders", { required: true } )}             
+                    />
+                  Halifax</label>                      
+              </div>    
+
+              <div> 
+                <label>
+                  <input
+                      className="mr-2"
+                      type="checkbox"
+                      name="lenders"
+                      value="Bank of Scotland, " 
+                      onChange={handleChange}
+                      {...register("lenders", { required: true } )}             
+                    />
+                  Bank of Scotland</label>                      
+              </div>     
+
+              <div> 
+                <label>
+                  <input
+                      className="mr-2"
+                      type="checkbox"
+                      name="lenders"
+                      value="HSBC, " 
+                      onChange={handleChange}
+                      {...register("lenders", { required: true } )}             
+                    />
+                  HSBC</label>                      
+              </div>   
+
+              <div> 
+                <label>
+                  <input
+                      className="mr-2"
+                      type="checkbox"
+                      name="lenders"
+                      value="Capitol One, " 
+                      onChange={handleChange}
+                      {...register("lenders", { required: true } )}             
+                    />
+                  Capitol One</label>                      
+              </div>    
+
+              <div> 
+                <label>
+                  <input
+                      className="mr-2"
+                      type="checkbox"
+                      name="lenders"
+                      value="MBNA, " 
+                      onChange={handleChange}
+                      {...register("lenders", { required: true } )}             
+                    />
+                  MBNA</label>                      
+              </div>  
+
+              <div> 
+                <label>
+                  <input
+                      className="mr-2"
+                      type="checkbox"
+                      name="lenders"
+                      value="Egg, " 
+                      onChange={handleChange}
+                      {...register("lenders", { required: true } )}             
+                    />
+                  Egg</label>                      
+              </div>  
+
+              <div> 
+                <label>
+                  <input
+                      className="mr-2"
+                      type="checkbox"
+                      name="lenders"
+                      value="Mint, " 
+                      onChange={handleChange}
+                      {...register("lenders", { required: true } )}             
+                    />
+                  Mint</label>                      
+              </div>  
+
+              <div> 
+                <label>
+                  <input
+                      className="mr-2"
+                      type="checkbox"
+                      name="lenders"
+                      value="Clydesdale, " 
+                      onChange={handleChange}
+                      {...register("lenders", { required: true } )}             
+                    />
+                  Clydesdale</label>                      
               </div>
 
-              <div>
-                <input
-                    type="checkbox"
-                    id="natwest"                    
-                    name="natwest"
-                    value="yes"                
-                    {...register('natwest')}       
-                  />   
-                <label htmlFor="natwest" className="ml-2">Natwest</label>                  
-              </div>  
-
-              <div>
-                <input
-                    type="checkbox"
-                    id="rbs"                    
-                    name="rbs"
-                    value="yes"                
-                    {...register('rbs')}       
-                  />
-                <label htmlFor="rbs" className="ml-2">RBS</label>                     
-              </div>                
-
-              <div>
-                <input
-                    type="checkbox"
-                    id="tsb"                    
-                    name="tsb"
-                    value="yes"                
-                    {...register('tsb')}       
-                  />   
-                <label htmlFor="tsb" className="ml-2">TSB</label>                  
-              </div> 
-
-              <div>
-                <input
-                    type="checkbox"
-                    id="halifax"                    
-                    name="halifax"
-                    value="yes"                
-                    {...register('halifax')}       
-                  />   
-                <label htmlFor="halifax" className="ml-2">Halifax</label>                  
+              <div> 
+                <label>
+                  <input
+                      className="mr-2"
+                      type="checkbox"
+                      name="lenders"
+                      value="Yorkshire, " 
+                      onChange={handleChange}
+                      {...register("lenders", { required: true } )}             
+                    />
+                  Yorkshire</label>                      
               </div>    
 
-              <div>
-                <input
-                    type="checkbox"
-                    id="bankofscotland"                    
-                    name="bankofscotland"
-                    value="yes"                
-                    {...register('bankofscotland')}
-                  />   
-                <label htmlFor="bankofscotland" className="ml-2">Bank of Scotland</label>                  
-              </div> 
-
-              <div>
-                <input
-                    type="checkbox"
-                    id="hsbc"                    
-                    name="hsbc"
-                    value="yes"                
-                    {...register('hsbc')}
-                  />   
-                <label htmlFor="hsbc" className="ml-2">HSBC</label>                  
-              </div>    
-
-              <div>
-                <input
-                    type="checkbox"
-                    id="capitalone"                    
-                    name="capitalone"
-                    value="yes"                
-                    {...register('capitolone')}
-                  />   
-                <label htmlFor="capitalone" className="ml-2">Capital One</label>                  
-              </div> 
-
-              <div>
-                <input
-                    type="checkbox"
-                    id="mbna"                    
-                    name="mbna"
-                    value="yes"                
-                    {...register('mbna')}
-                  />   
-                <label htmlFor="mbna" className="ml-2">MBNA</label>                  
-              </div>    
-
-              <div>
-                <input
-                    type="checkbox"
-                    id="egg"                    
-                    name="egg"
-                    value="yes"                
-                    {...register('egg')}
-                  />   
-                <label htmlFor="egg" className="ml-2">EGG</label>                  
-              </div>  
-
-              <div>
-                <input
-                    type="checkbox"
-                    id="mint"                    
-                    name="mint"
-                    value="yes"                
-                    {...register('mint')}
-                  />   
-                <label htmlFor="mint" className="ml-2">Mint</label>                  
-              </div>    
-
-              <div>
-                <input
-                    type="checkbox"
-                    id="clydesdale"                    
-                    name="clydesdale"
-                    value="yes"                
-                    {...register('clydesdale')}
-                  />   
-                <label htmlFor="clydesdale" className="ml-2">Clydesdale Bank</label>                  
+              <div> 
+                <label>
+                  <input
+                      className="mr-2"
+                      type="checkbox"
+                      name="lenders"
+                      value="M and S, " 
+                      onChange={handleChange}
+                      {...register("lenders", { required: true } )}             
+                    />
+                  M&amp;S Bank</label>                      
               </div>   
 
-              <div>
-                <input
-                    type="checkbox"
-                    id="yorkshire"                    
-                    name="yorkshire"
-                    value="yes"                
-                    {...register('yorkshire')}
-                  />   
-                <label htmlFor="yorkshire" className="ml-2">Yorkshire Bank</label>                  
-              </div>    
-
-              <div>
-                <input
-                    type="checkbox"
-                    id="mands"                    
-                    name="mands"
-                    value="yes"                
-                    {...register('mands')}
-                  />   
-                <label htmlFor="mands" className="ml-2">M&amp;S Bank</label>                  
+              <div> 
+                <label>
+                  <input
+                      className="mr-2"
+                      type="checkbox"
+                      name="lenders"
+                      value="Santander, " 
+                      onChange={handleChange}
+                      {...register("lenders", { required: true } )}             
+                    />
+                  Santander</label>                      
               </div>  
+              
+              <div> 
+                <label>
+                  <input
+                      className="mr-2"
+                      type="checkbox"
+                      name="lenders"
+                      value="Alliance, " 
+                      onChange={handleChange}
+                      {...register("lenders", { required: true } )}             
+                    />
+                  Alliance</label>                      
+              </div>                                                        
 
-              <div>
-
-                <input
-                    type="checkbox"
-                    id="santander"                    
-                    name="santander"
-                    value="yes"                
-                    {...register('santander')}
-                  />   
-                <label htmlFor="santander" className="ml-2">Santander</label>                  
+              <div> 
+                <label>
+                  <input
+                      className="mr-2"
+                      type="checkbox"
+                      name="lenders"
+                      value="Abbey, " 
+                      onChange={handleChange}
+                      {...register("lenders", { required: true } )}             
+                    />
+                  Abbey</label>                      
               </div>    
 
-              <div>
-                <input
-                    type="checkbox"
-                    id="alliance"                    
-                    name="alliance"
-                    value="yes"                
-                    {...register('alliance')}
-                  />
-                <label htmlFor="alliance" className="ml-2">Alliance &amp; Leicester</label>                     
-              </div>  
-
-
-              <div>
-                <input
-                    type="checkbox"
-                    id="abbey"                    
-                    name="abbey"
-                    value="yes"                
-                    {...register('abbey')}
-                  />
-                <label htmlFor="abbey" className="ml-2">Abbey National</label>                     
-              </div> 
-
-              <div>
-                <input
-                    type="checkbox"
-                    id="blackhorse"                    
-                    name="blackhorse"
-                    value="yes"                
-                    {...register('blackhorse')}
-                  />   
-                <label htmlFor="blackhorse" className="ml-2">Black Horse</label>                  
-              </div>    
-
-              <div>
-                <input
-                    type="checkbox"
-                    id="northernrock"                    
-                    name="northernrock"
-                    value="yes"                
-                    {...register('northernrock')}
-                  />   
-                <label htmlFor="northernrock" className="ml-2">Northern Rock</label>                  
+              <div> 
+                <label>
+                  <input
+                      className="mr-2"
+                      type="checkbox"
+                      name="lenders"
+                      value="Black Horse, " 
+                      onChange={handleChange}
+                      {...register("lenders", { required: true } )}             
+                    />
+                  Black Horse</label>                      
               </div>   
 
-              <div>
-                <input
-                    type="checkbox"
-                    id="coop"                    
-                    name="coop"
-                    value="yes"                
-                    {...register('coop')}
-                  />   
-                <label htmlFor="coop" className="ml-2">Co-operative Bank</label>                  
-              </div>    
+              <div> 
+                <label>
+                  <input
+                      className="mr-2"
+                      type="checkbox"
+                      name="lenders"
+                      value="Northern Rock, " 
+                      onChange={handleChange}
+                      {...register("lenders", { required: true } )}             
+                    />
+                  Northern Rock</label>                      
+              </div>                    
+ 
+              <div> 
+                <label>
+                  <input
+                      className="mr-2"
+                      type="checkbox"
+                      name="lenders"
+                      value="Coop, " 
+                      onChange={handleChange}
+                      {...register("lenders", { required: true } )}             
+                    />
+                  Co-operative Bank</label>                      
+              </div>  
 
-
-
+              {errors.lenders?.type === 'required' && "Please choose at least one lender"}
 
         </div>
-*/}        
-        <div className="form-group flex align-items-center mt-4">
-              <div>
-                <label htmlFor="name" class="mr-2">Lender not listed?</label>
-                <input
-                  type="text"
-                  id="name"                
-                  name="name"
-                  placeholder="name"   
-                  defaultValue={defaultValues && defaultValues.name}
-                  {...register("name", { required: true } )}              
-                />  
-                {errors.name?.type === 'required' && "name is required"}
-              </div>  
-        </div>  
+       
 
         <div className="form-group flex align-items-center mt-4">
               <div>
                 <label htmlFor="lender" class="mr-2">Lender not listed?</label>
                 <input
-                  type="text"
-                  id="lender"                
-                  name="lender"
+                  type="text"              
+                  name="otherlender"
                   placeholder="Add them here"   
-                  defaultValue={defaultValues && defaultValues.lender}
-                  {...register("lender", { required: true } )}              
+                  defaultValue={defaultValues && defaultValues.otherlender}
+                  {...register("lender" )}              
                 />  
-                 {errors.lender?.type === 'required' && "lender is required"}
               </div>  
         </div>          
     
