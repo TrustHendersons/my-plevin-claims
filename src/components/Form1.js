@@ -1,4 +1,5 @@
 import React from "react";
+import FeatherIcon from "feather-icons-react"
 
 function Form1 ({
   register,
@@ -306,21 +307,20 @@ function Form1 ({
                     />
                   Co-operative Bank</label>                      
               </div>  
-
-              {errors.lenders?.type === 'required' && "Please choose at least one lender"}
-
         </div>
+
+        {errors.lenders?.type === 'required' && <p class="errors mt-4"><FeatherIcon icon="alert-triangle" className="mr-2" />Please choose at least one lender</p>}
        
 
         <div className="form-group flex align-items-center mt-4">
               <div>
-                <label htmlFor="lender" class="mr-2">Lender not listed?</label>
+                <label htmlFor="otherlender" class="mr-2">Lender not listed?</label>
                 <input
                   type="text"              
                   name="otherlender"
                   placeholder="Add them here"   
                   defaultValue={defaultValues && defaultValues.otherlender}
-                  {...register("lender" )}              
+                  {...register("otherlender" )}              
                 />  
               </div>  
         </div>          

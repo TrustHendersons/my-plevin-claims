@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "gatsby"
+import FeatherIcon from "feather-icons-react"
 
 function Form3({ register, errors, shouldDisplay }) {
   return (
@@ -20,7 +21,8 @@ function Form3({ register, errors, shouldDisplay }) {
           placeholder="Enter your email"                
           {...register("email", { required: true } )}   
         />  
-          {errors.email?.type === 'required' && "Email is required"}
+        {errors.email?.type === 'required' && <p class="errors mt-2"><FeatherIcon icon="alert-triangle" className="mr-2" />
+        Please provide an email address</p>}         
         </div> 
 
         <div>
@@ -32,7 +34,8 @@ function Form3({ register, errors, shouldDisplay }) {
           placeholder="Enter your number"                
           {...register("tel", { required: true } )}   
         />  
-          {errors.tel?.type === 'required' && "Phone number is required"}
+        {errors.tel?.type === 'required' && <p class="errors mt-2"><FeatherIcon icon="alert-triangle" className="mr-2" />
+        Please provide a telephone number</p>}  
         </div>  
 
         <div className="col-span-2 flex items-center">
@@ -45,8 +48,9 @@ function Form3({ register, errors, shouldDisplay }) {
               {...register("privacy", { required: true } )}   
             />
           <label htmlFor="privacy" className="mr-2 text-sm">I have read and understood the <Link to="/privacy/">Privacy Policy</Link> and agree to be contacted using the details supplied.</label>               
-          {errors.privacy?.type === 'required' && "You must check this"}
         </div>                                       
+        {errors.privacy?.type === 'required' && <p class="errors"><FeatherIcon icon="alert-triangle" className="mr-2" />
+        You must agree to the privacy policy</p>}  
 
         </div>
 

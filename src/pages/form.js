@@ -3,8 +3,9 @@ import { navigate } from "gatsby"
 import Layout from "../components/layout"
 import Form1 from "../components/Form1";
 import Form2 from "../components/Form2";
-import Form3 from "../components/Form3";
-import Form4 from "../components/Form4";
+import Form3 from "../components/Form2a";
+import Form4 from "../components/Form3";
+import Form5 from "../components/Form4";
 import { useForm } from "react-hook-form";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
@@ -51,7 +52,7 @@ function MainComponent() {
       )
     },
     {
-      fields: ["firstName", "lastName", "dob"],
+      fields: ["title", "firstName", "lastName", "dob", "address_line1", "postcode"],
       component: (register, errors) => (
         <Form2
           key={1}
@@ -63,23 +64,34 @@ function MainComponent() {
       )
     },
     {
-      fields: ["email", "tel", "privacy"],
+      fields: ["PrevAddress", "prevAddress_line1", "prev_postcode"],
       component: (register, errors) => (
         <Form3
           key={2}
           shouldDisplay={currentForm === 2}
+          defaultValues={defaultValues}
+          register={register}  
+          errors={errors}         
+        />
+      )
+    },    
+    {
+      fields: ["email", "tel", "privacy"],
+      component: (register, errors) => (
+        <Form4
+          key={3}
+          shouldDisplay={currentForm === 3}
           register={register}  
           errors={errors}
-          values={getValues()}
         />
       )
     },
     {
       fields: ["email"],
       component: (errors) => (
-        <Form4
-          key={3}
-          shouldDisplay={currentForm === 3}
+        <Form5
+          key={4}
+          shouldDisplay={currentForm === 4}
           errors={errors}
           values={getValues()}
         />
@@ -165,7 +177,7 @@ function MainComponent() {
           </button>
         )}
 
-        {currentForm === 3 && (
+        {currentForm === 4 && (
           <button
             onClick={handleSubmit}
             className="btn-green"

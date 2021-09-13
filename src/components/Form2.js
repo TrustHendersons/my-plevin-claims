@@ -1,5 +1,6 @@
-import React, {useEffect, createRef, useState} from "react";
+import React, {useEffect, createRef} from "react";
 import { PostcodeLookup } from "@ideal-postcodes/postcode-lookup";
+import FeatherIcon from "feather-icons-react"
 
 function Form2({ 
   register,  
@@ -14,7 +15,7 @@ function Form2({
   
     useEffect(() => {
       PostcodeLookup.setup({
-        apiKey: "ak_kt1m9kndpJwBiEP6CXPnLaPdfdoYH",
+        apiKey: "iddqd",
         context: context.current,
         outputFields: {
               line_1: '#address_line1',  
@@ -35,23 +36,6 @@ function Form2({
   };
 
 
-   {/*    
-    const [touched, setTouched] = useState([]);
-
- } const handleChange = (event) => {
-      setValues({
-        ...values,
-        [event.target.name]: event.target.value
-      });
-      if (!touched.includes(event.target.name)) { // NEW
-        setTouched([
-          ...touched,
-          event.target.name
-        ])
-      }
-    }  */}
-
-
 
   return (
 
@@ -67,7 +51,7 @@ function Form2({
               <div className="mt-2">
                 <label htmlFor="title" class="mr-2">Title:</label> <br />
                 <select name="title"  {...register("title", { required: true } )}   >
-                <option value="title">Title</option>                  
+                  <option value="..."></option>                  
                   <option value="mr">Mr</option>
                   <option value="mrs">Mrs</option>
                   <option value="miss">Miss</option>
@@ -84,7 +68,7 @@ function Form2({
                   defaultValue={defaultValues && defaultValues.firstName}
                   {...register("firstName", { required: true, maxLength: 20 })}       
                 /> 
-                {errors.firstName?.type === 'required' && "First name is required"}
+                {errors.firstName?.type === 'required' && <p class="errors mt-2"><FeatherIcon icon="alert-triangle" className="mr-2" />A first name is required</p>}
               </div>
 
               <div className="mt-2">
@@ -97,7 +81,7 @@ function Form2({
                   defaultValue={defaultValues && defaultValues.lastName}
                   {...register("lastName", { required: true } )}              
                 />  
-                {errors.lastName?.type === 'required' && "Last name is required"}
+                {errors.lastName?.type === 'required' && <p class="errors mt-2"><FeatherIcon icon="alert-triangle" className="mr-2" />A last name is required</p>}
               </div>    
 
               <div className="mt-2">
@@ -106,10 +90,12 @@ function Form2({
                   type="date"
                   id="dob"                
                   name="dob" 
+                  placeholder="dd/mm/yyyy"                    
                   defaultValue={defaultValues && defaultValues.dob}
                   {...register("dob", { required: true } )}                                     
                 />  
-                {errors.dob?.type === 'required' && "Date of birth is required"}
+                {errors.dob?.type === 'required' && <p class="errors mt-2"><FeatherIcon icon="alert-triangle" className="mr-2" />
+                A date of birth is required</p>}
               </div>   
 
             </div>  
@@ -118,17 +104,20 @@ function Form2({
                 <PostcodeLookupComponent/>
 
                 <div className="mt-4">  
-                  <label htmlFor="address_line1" class="mr-2">Line 1</label>
+                  <label htmlFor="address_line1" class="mr-2">Address 1:</label>
                   <input
                     type="text"
                     id="address_line1"
                     name="address_line1"
                     {...register("address_line1", { required: true } )}   
+                    
                   />
+                {errors.address_line1?.type === 'required' && <p class="errors mt-2"><FeatherIcon icon="alert-triangle" className="mr-2" />
+                Please add the first line of your address</p>}                  
                 </div>
 
                 <div className="mt-4">  
-                  <label class="mr-2">Line 2</label>
+                  <label class="mr-2">Address 2:</label>
                   <input
                     type="text"
                     id="address_line2"
@@ -138,7 +127,7 @@ function Form2({
                 </div>
 
                 <div className="mt-4">  
-                  <label class="mr-2">Line 3</label>
+                  <label class="mr-2">Address 3:</label>
                   <input
                     type="text"
                     id="address_line3"
@@ -148,7 +137,7 @@ function Form2({
                 </div>
 
                 <div className="mt-4">  
-                  <label class="mr-2">Post Town</label>
+                  <label class="mr-2">Town:</label>
                   <input
                     type="text"
                     id="post_town"
@@ -158,36 +147,16 @@ function Form2({
                 </div>
 
                 <div className="mt-4">  
-                  <label class="mr-2">Postcode</label>
+                  <label class="mr-2">Postcode:</label>
                   <input
                     type="text"
                     id="postcode"
                     name="postcode"
                     {...register("postcode", { required: true } )}   
                   />
+                {errors.postcode?.type === 'required' && <p class="errors mt-2"><FeatherIcon icon="alert-triangle" className="mr-2" />
+                Please add your postcode</p>}                         
                 </div>
-
-                <div className="flex mt-6 col-span-2">
-                  <p className="mr-2">Was this your address at the time you took out the PPI?</p>
-                  <input
-                      type="checkbox"
-                      id="PrevYes"
-                      name="PrevYes"
-                      value="yes" 
-                      isChecked                         
-                      {...register('PrevYes')}             
-                    />
-                    <label htmlFor="prevYes" className="mx-2">Yes</label>   
-                    <input 
-                      type="checkbox"
-                      id="PrevNo"
-                      name="PrevNo"
-                      value="yes" 
-                      isChecked                 
-                      {...register('PrevNo')}                    
-                    />
-                    <label htmlFor="prevNo" className="mx-2">No</label>   
-                  </div>
                 
                   <div>
 
