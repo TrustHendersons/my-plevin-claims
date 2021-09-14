@@ -64,14 +64,13 @@ function MainComponent() {
       )
     },
     {
-      fields: ["PrevAddress", "prevAddress_line1", "prev_postcode"],
-      component: (register, errors) => (
+      fields: ["prevAddress_line1", "prev_postcode"],
+      component: (register) => (
         <Form3
           key={2}
           shouldDisplay={currentForm === 2}
           defaultValues={defaultValues}
-          register={register}  
-          errors={errors}         
+          register={register}          
         />
       )
     },    

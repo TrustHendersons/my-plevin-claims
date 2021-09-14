@@ -30,7 +30,7 @@ function Form1 ({
                       name="lenders"
                       value="Lloyds, " 
                       onChange={handleChange}
-                      {...register("lenders", { required: true } )}             
+                      {...register("lenders" )}             
                     />
                   Lloyds</label>                      
               </div>  
@@ -43,7 +43,7 @@ function Form1 ({
                       name="lenders"
                       value="Barclays, " 
                       onChange={handleChange}
-                      {...register("lenders", { required: true } )}             
+                      {...register("lenders" )}             
                     />
                   Barclays</label>                      
               </div>  
@@ -56,7 +56,7 @@ function Form1 ({
                       name="lenders"
                       value="Barclaycard, " 
                       onChange={handleChange}
-                      {...register("lenders", { required: true } )}             
+                      {...register("lenders" )}             
                     />
                   Barclaycard</label>                      
               </div>    
@@ -69,7 +69,7 @@ function Form1 ({
                       name="lenders"
                       value="Natwest, " 
                       onChange={handleChange}
-                      {...register("lenders", { required: true } )}             
+                      {...register("lenders" )}             
                     />
                   Natwest</label>                      
               </div>   
@@ -82,7 +82,7 @@ function Form1 ({
                       name="lenders"
                       value="RBS, " 
                       onChange={handleChange}
-                      {...register("lenders", { required: true } )}             
+                      {...register("lenders" )}             
                     />
                   RBS</label>                      
               </div>   
@@ -95,7 +95,7 @@ function Form1 ({
                       name="lenders"
                       value="TSB, " 
                       onChange={handleChange}
-                      {...register("lenders", { required: true } )}             
+                      {...register("lenders" )}             
                     />
                   TSB</label>                      
               </div>   
@@ -108,7 +108,7 @@ function Form1 ({
                       name="lenders"
                       value="Halifax, " 
                       onChange={handleChange}
-                      {...register("lenders", { required: true } )}             
+                      {...register("lenders" )}             
                     />
                   Halifax</label>                      
               </div>    
@@ -121,7 +121,7 @@ function Form1 ({
                       name="lenders"
                       value="Bank of Scotland, " 
                       onChange={handleChange}
-                      {...register("lenders", { required: true } )}             
+                      {...register("lenders" )}             
                     />
                   Bank of Scotland</label>                      
               </div>     
@@ -134,7 +134,7 @@ function Form1 ({
                       name="lenders"
                       value="HSBC, " 
                       onChange={handleChange}
-                      {...register("lenders", { required: true } )}             
+                      {...register("lenders" )}             
                     />
                   HSBC</label>                      
               </div>   
@@ -147,7 +147,7 @@ function Form1 ({
                       name="lenders"
                       value="Capitol One, " 
                       onChange={handleChange}
-                      {...register("lenders", { required: true } )}             
+                      {...register("lenders" )}             
                     />
                   Capitol One</label>                      
               </div>    
@@ -160,7 +160,7 @@ function Form1 ({
                       name="lenders"
                       value="MBNA, " 
                       onChange={handleChange}
-                      {...register("lenders", { required: true } )}             
+                      {...register("lenders" )}             
                     />
                   MBNA</label>                      
               </div>  
@@ -173,7 +173,7 @@ function Form1 ({
                       name="lenders"
                       value="Egg, " 
                       onChange={handleChange}
-                      {...register("lenders", { required: true } )}             
+                      {...register("lenders" )}             
                     />
                   Egg</label>                      
               </div>  
@@ -186,7 +186,7 @@ function Form1 ({
                       name="lenders"
                       value="Mint, " 
                       onChange={handleChange}
-                      {...register("lenders", { required: true } )}             
+                      {...register("lenders" )}             
                     />
                   Mint</label>                      
               </div>  
@@ -199,7 +199,7 @@ function Form1 ({
                       name="lenders"
                       value="Clydesdale, " 
                       onChange={handleChange}
-                      {...register("lenders", { required: true } )}             
+                      {...register("lenders" )}             
                     />
                   Clydesdale</label>                      
               </div>
@@ -212,7 +212,7 @@ function Form1 ({
                       name="lenders"
                       value="Yorkshire, " 
                       onChange={handleChange}
-                      {...register("lenders", { required: true } )}             
+                      {...register("lenders" )}             
                     />
                   Yorkshire</label>                      
               </div>    
@@ -225,7 +225,7 @@ function Form1 ({
                       name="lenders"
                       value="M and S, " 
                       onChange={handleChange}
-                      {...register("lenders", { required: true } )}             
+                      {...register("lenders" )}             
                     />
                   M&amp;S Bank</label>                      
               </div>   
@@ -238,7 +238,7 @@ function Form1 ({
                       name="lenders"
                       value="Santander, " 
                       onChange={handleChange}
-                      {...register("lenders", { required: true } )}             
+                      {...register("lenders" )}             
                     />
                   Santander</label>                      
               </div>  
@@ -251,7 +251,7 @@ function Form1 ({
                       name="lenders"
                       value="Alliance, " 
                       onChange={handleChange}
-                      {...register("lenders", { required: true } )}             
+                      {...register("lenders" )}             
                     />
                   Alliance</label>                      
               </div>                                                        
@@ -264,7 +264,7 @@ function Form1 ({
                       name="lenders"
                       value="Abbey, " 
                       onChange={handleChange}
-                      {...register("lenders", { required: true } )}             
+                      {...register("lenders" )}             
                     />
                   Abbey</label>                      
               </div>    
@@ -277,7 +277,7 @@ function Form1 ({
                       name="lenders"
                       value="Black Horse, " 
                       onChange={handleChange}
-                      {...register("lenders", { required: true } )}             
+                      {...register("lenders" )}             
                     />
                   Black Horse</label>                      
               </div>   
@@ -290,7 +290,7 @@ function Form1 ({
                       name="lenders"
                       value="Northern Rock, " 
                       onChange={handleChange}
-                      {...register("lenders", { required: true } )}             
+                      {...register("lenders" )}             
                     />
                   Northern Rock</label>                      
               </div>                    
@@ -303,7 +303,7 @@ function Form1 ({
                       name="lenders"
                       value="Coop, " 
                       onChange={handleChange}
-                      {...register("lenders", { required: true } )}             
+                      {...register("lenders" )}             
                     />
                   Co-operative Bank</label>                      
               </div>  
