@@ -140,6 +140,7 @@ function MainComponent() {
       <p className="text-center">Answer the quick questions below to see if you may have a claim</p> 
 
       <section className="section md:shadow w-50">
+
         <progress max="3" value={currentForm}></progress>
         <div className="progress">
           <h4 className="underline">Step {currentForm + 1}</h4>
@@ -157,35 +158,38 @@ function MainComponent() {
           {forms.map(form => form.component(register, errors, defaultValues))}
         </form>
 
-        {prevButton && (
-          <button
-            className="btn-blue"
-            type="button"
-            onClick={moveToPrevious}
-          >
-            Back
-          </button>
-        )}
 
-        {nextButton && (
-          <button 
-            className="btn-blue" 
-            type="button" 
-            onClick={moveToNext}
-          >
-            Next
-          </button>
-        )}
+        <div className="flex justify-between">
+          {prevButton && (
+            <button
+              className="btn-blue"
+              type="button"
+              onClick={moveToPrevious}
+            >
+              Back
+            </button>
+          )}
 
-        {currentForm === 4 && (
-          <button
-            onClick={handleSubmit}
-            className="btn-green"
-            type="submit"
-          >
-            Submit
-          </button>
-        )}
+          {nextButton && (
+            <button 
+              className="btn-green" 
+              type="button" 
+              onClick={moveToNext}
+            >
+              Next
+            </button>
+          )}
+
+          {currentForm === 4 && (
+            <button
+              onClick={handleSubmit}
+              className="btn-green"
+              type="submit"
+            >
+              Submit
+            </button>
+          )}
+        </div>
 
       </section>  
 

@@ -42,14 +42,16 @@ function Form2({
     <div style={{ display: shouldDisplay ? "block" : "none" }}>
 
         <h3 className="text-blue-dark mb-1">Previous Address</h3> 
-        <p>Please enter your address at the time you held the PPI or tick no previous address</p>      
+        <p>If you lived at a different address when you held the PPI, please enter it below. If your address was the same as it is now, just click Next.</p>      
 
           <div className="form-group flex grid grid-cols-none grid-rows-none md:grid-cols-2 md:grid-rows-1 gap-4 md:gap-x-20">
 
             <div>
-                <PostcodeLookupComponent/>
+                <PostcodeLookupComponent className="mt-4"/>
+            </div>
 
-                <div className="mt-4">  
+            <div>
+                <div>  
                   <label htmlFor="prevAddress_line1" class="mr-2">Address 1:</label>
                   <input
                     type="text"
@@ -104,18 +106,6 @@ function Form2({
 
               </div>
             </div>          
-    
-            <div>
-                  <input 
-                    type="checkbox"
-                    id="PrevAddress"
-                    name="PrevAddress"
-                    value="No" 
-                    isChecked                 
-                    {...register('PrevAddress' )}                    
-                  />
-                  <label htmlFor="PrevAddress" className="mx-2">No previous address</label>                   
-            </div>
     
           </div>
     </div>

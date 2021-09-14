@@ -25,10 +25,8 @@ const Layout = ({ children }) => {
   
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
 
-        <main class="flex-grow">
-          <div className="lg:container h-full">
+        <main>
             {children}
-          </div>  
         </main>
 
          <div className="subfooter">
