@@ -13,7 +13,7 @@ const IndexPage = () => (
 
         <div className="flex grid grid-cols-1 md:grid-cols-3 gap-4 h-2/3 text-center">
 
-          <div className="w-2/3 pt-6 col-span-2 h-full mx-auto">
+          <div className="w-5/6 md:w-2/3 pt-6 col-span-2 h-full mx-auto">
 
             <div>
               <h1 className="uppercase text-green-500 mb-1 uppercase">Missed the PPI deadline?</h1>
@@ -21,11 +21,11 @@ const IndexPage = () => (
               <p className="text-lg">£billions can be claimed in 'Plevin' cases (also know as PPI2) after a landmark court ruling. <strong>Crucially, the PPI Deadline does NOT apply to these claims!</strong></p>
             </div>
 
-            <div className="section-start rounded-md mx-auto p-4">
+            <div className="section-start rounded-md mx-auto p-1 md:p-4">
               <h2 className="text-center uppercase mb-2">Start your Free Plevin Check today</h2>
               <h3 className="text-center">Did you take out PPI?</h3>
 
-              <div className="mx-auto mt-3">
+              <div className="md:w-3/6 mx-auto mt-3">
                 <Link className="btn-start m-2 pt-3" to="/form/">YES</Link>
                 <Link className="btn-start m-2 pt-3" to="/form/">UNSURE</Link>
                 <Link className="btn-start m-2 pt-3" to="/no-claim/">NO</Link>
