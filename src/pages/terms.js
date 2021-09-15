@@ -6,6 +6,8 @@ const TermsPage = () => (
   <Layout>
     <Seo title="Home" />
 
+    <div className="lg:container">
+
       <div className="grid grid-cols-0 gap-4">
             
             <h1 class="display-1">Terms &amp; Conditions</h1>
@@ -230,15 +232,15 @@ const TermsPage = () => (
                             Telephone us: 0161 359 7140 <br />
                             Email us: <a href="mailto:contact@trusthendersons.co.uk">contact@trusthendersons.co.uk</a> <br />
                     </li> 
-                    <li>We will send you a written acknowledgement with a copy of our complaint’s procedure promptly and in any event within 3 business days. If we haven’t resolved Your complaint within 8 weeks of receipt or You are not satisfied with our response You can refer it to the Financial Ombudsman Service, whose contact details are: Financial Ombudsman Service, Exchange Tower, Harbour Exchange, London, E14 9SR, <a href="http://www.financial-ombudsman.org.uk" target="_blank">www.financial-ombudsman.org.uk</a>, Tel: 0800 023 4567. </li>
-                    <li>If you believe we have breached our Data Protection Legislation, you have the right to make a complaint at any time to the Information Commissioner's Office (ICO), the UK supervisory authority for data protection issues (<a href="http://www.www.ico.org.uk" target="_blank">www.ico.org.uk</a>). We would, however, appreciate the chance to deal with your concerns before you approach the ICO so please contact us using the details above.</li>
+                    <li>We will send you a written acknowledgement with a copy of our complaint’s procedure promptly and in any event within 3 business days. If we haven’t resolved Your complaint within 8 weeks of receipt or You are not satisfied with our response You can refer it to the Financial Ombudsman Service, whose contact details are: Financial Ombudsman Service, Exchange Tower, Harbour Exchange, London, E14 9SR, <a href="http://www.financial-ombudsman.org.uk" target="_blank" rel="noopener noreferrer">www.financial-ombudsman.org.uk</a>, Tel: 0800 023 4567. </li>
+                    <li>If you believe we have breached our Data Protection Legislation, you have the right to make a complaint at any time to the Information Commissioner's Office (ICO), the UK supervisory authority for data protection issues (<a href="http://www.www.ico.org.uk" target="_blank" rel="noopener noreferrer">www.ico.org.uk</a>). We would, however, appreciate the chance to deal with your concerns before you approach the ICO so please contact us using the details above.</li>
                 </ol>         
             </li>                     
                    
             <li><h4>Data Protection</h4> 
                 <ol>
                     <li>We will process Your information in accordance with Data Protection Legislation.</li> 
-                    <li>You can read more about how We use Your data in our Privacy Policy on our website at <a href="https://www.trusthendersons.co.uk/privacy.html" target="_blank">www.trusthendersons.co.uk/privacy.html</a>, Tel: 0161 359 7140. </li>
+                    <li>You can read more about how We use Your data in our Privacy Policy on our website at <a href="https://www.trusthendersons.co.uk/privacy.html" target="_blank" rel="noopener noreferrer">www.trusthendersons.co.uk/privacy.html</a>, Tel: 0161 359 7140. </li>
                 </ol>         
             </li> 
                   
@@ -272,7 +274,9 @@ const TermsPage = () => (
                 
                 
                
-            </div>        
+            </div>   
+
+       </div>          
 
 </Layout>
 )

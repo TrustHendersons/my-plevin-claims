@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "gatsby"
 import FeatherIcon from "feather-icons-react"
 
 function Form3({ register, errors, shouldDisplay }) {
@@ -47,7 +46,7 @@ function Form3({ register, errors, shouldDisplay }) {
               value="yes"                
               {...register("privacy", { required: true } )}   
             />
-          <label htmlFor="privacy" className="mr-2 text-sm">I have read and understood the <Link to="/privacy/">Privacy Policy</Link> and agree to be contacted using the details supplied.</label>               
+          <label htmlFor="privacy" className="mr-2 text-sm">I have read and understood the <a href="/privacy" target="_blank" rel="noopener noreferrer">Privacy Policy</a> and agree to be contacted using the details supplied.</label>               
         </div>                                       
         {errors.privacy?.type === 'required' && <p class="errors"><FeatherIcon icon="alert-triangle" className="mr-2" />
         You must agree to the privacy policy</p>}  

@@ -6,12 +6,8 @@ function Form1 ({
   errors,
   shouldDisplay,
   defaultValues,
-  isChecked
 }) {
 
-  const handleChange = e => {
-    let isChecked = e.target.checked;
-  };
 
   return (
     <div style={{ display: shouldDisplay ? "block" : "none" }}>
@@ -29,7 +25,6 @@ function Form1 ({
                       type="checkbox"
                       name="lenders"
                       value="Lloyds, " 
-                      onChange={handleChange}
                       {...register("lenders" )}             
                     />
                   Lloyds</label>                      
@@ -42,7 +37,6 @@ function Form1 ({
                       type="checkbox"
                       name="lenders"
                       value="Barclays, " 
-                      onChange={handleChange}
                       {...register("lenders" )}             
                     />
                   Barclays</label>                      
@@ -55,7 +49,6 @@ function Form1 ({
                       type="checkbox"
                       name="lenders"
                       value="Barclaycard, " 
-                      onChange={handleChange}
                       {...register("lenders" )}             
                     />
                   Barclaycard</label>                      
@@ -68,7 +61,6 @@ function Form1 ({
                       type="checkbox"
                       name="lenders"
                       value="Natwest, " 
-                      onChange={handleChange}
                       {...register("lenders" )}             
                     />
                   Natwest</label>                      
@@ -81,7 +73,6 @@ function Form1 ({
                       type="checkbox"
                       name="lenders"
                       value="RBS, " 
-                      onChange={handleChange}
                       {...register("lenders" )}             
                     />
                   RBS</label>                      
@@ -94,7 +85,6 @@ function Form1 ({
                       type="checkbox"
                       name="lenders"
                       value="TSB, " 
-                      onChange={handleChange}
                       {...register("lenders" )}             
                     />
                   TSB</label>                      
@@ -107,7 +97,6 @@ function Form1 ({
                       type="checkbox"
                       name="lenders"
                       value="Halifax, " 
-                      onChange={handleChange}
                       {...register("lenders" )}             
                     />
                   Halifax</label>                      
@@ -120,7 +109,6 @@ function Form1 ({
                       type="checkbox"
                       name="lenders"
                       value="Bank of Scotland, " 
-                      onChange={handleChange}
                       {...register("lenders" )}             
                     />
                   Bank of Scotland</label>                      
@@ -133,7 +121,6 @@ function Form1 ({
                       type="checkbox"
                       name="lenders"
                       value="HSBC, " 
-                      onChange={handleChange}
                       {...register("lenders" )}             
                     />
                   HSBC</label>                      
@@ -145,11 +132,10 @@ function Form1 ({
                       className="mr-2"
                       type="checkbox"
                       name="lenders"
-                      value="Capitol One, " 
-                      onChange={handleChange}
+                      value="Capital One, " 
                       {...register("lenders" )}             
                     />
-                  Capitol One</label>                      
+                  Capital One</label>                      
               </div>    
 
               <div> 
@@ -159,7 +145,6 @@ function Form1 ({
                       type="checkbox"
                       name="lenders"
                       value="MBNA, " 
-                      onChange={handleChange}
                       {...register("lenders" )}             
                     />
                   MBNA</label>                      
@@ -172,7 +157,6 @@ function Form1 ({
                       type="checkbox"
                       name="lenders"
                       value="Egg, " 
-                      onChange={handleChange}
                       {...register("lenders" )}             
                     />
                   Egg</label>                      
@@ -185,7 +169,6 @@ function Form1 ({
                       type="checkbox"
                       name="lenders"
                       value="Mint, " 
-                      onChange={handleChange}
                       {...register("lenders" )}             
                     />
                   Mint</label>                      
@@ -198,7 +181,6 @@ function Form1 ({
                       type="checkbox"
                       name="lenders"
                       value="Clydesdale, " 
-                      onChange={handleChange}
                       {...register("lenders" )}             
                     />
                   Clydesdale</label>                      
@@ -211,7 +193,6 @@ function Form1 ({
                       type="checkbox"
                       name="lenders"
                       value="Yorkshire, " 
-                      onChange={handleChange}
                       {...register("lenders" )}             
                     />
                   Yorkshire</label>                      
@@ -224,7 +205,6 @@ function Form1 ({
                       type="checkbox"
                       name="lenders"
                       value="M and S, " 
-                      onChange={handleChange}
                       {...register("lenders" )}             
                     />
                   M&amp;S Bank</label>                      
@@ -237,7 +217,6 @@ function Form1 ({
                       type="checkbox"
                       name="lenders"
                       value="Santander, " 
-                      onChange={handleChange}
                       {...register("lenders" )}             
                     />
                   Santander</label>                      
@@ -250,7 +229,6 @@ function Form1 ({
                       type="checkbox"
                       name="lenders"
                       value="Alliance, " 
-                      onChange={handleChange}
                       {...register("lenders" )}             
                     />
                   Alliance</label>                      
@@ -263,7 +241,6 @@ function Form1 ({
                       type="checkbox"
                       name="lenders"
                       value="Abbey, " 
-                      onChange={handleChange}
                       {...register("lenders" )}             
                     />
                   Abbey</label>                      
@@ -276,7 +253,6 @@ function Form1 ({
                       type="checkbox"
                       name="lenders"
                       value="Black Horse, " 
-                      onChange={handleChange}
                       {...register("lenders" )}             
                     />
                   Black Horse</label>                      
@@ -289,7 +265,6 @@ function Form1 ({
                       type="checkbox"
                       name="lenders"
                       value="Northern Rock, " 
-                      onChange={handleChange}
                       {...register("lenders" )}             
                     />
                   Northern Rock</label>                      
@@ -302,7 +277,6 @@ function Form1 ({
                       type="checkbox"
                       name="lenders"
                       value="Coop, " 
-                      onChange={handleChange}
                       {...register("lenders" )}             
                     />
                   Co-operative Bank</label>                      

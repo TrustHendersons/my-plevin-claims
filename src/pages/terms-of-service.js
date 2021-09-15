@@ -6,6 +6,8 @@ const TermsPage = () => (
   <Layout>
     <Seo title="Terms of Service" />
 
+    <div className="lg:container">
+
       <div className="grid grid-cols-0 gap-4">
             
             <h1 class="display-1">Free Check Terms of Service</h1>
@@ -23,7 +25,9 @@ const TermsPage = () => (
 
             <p>Finally, we reserve the right to choose not to process a free check. If we do not process the check, we will write to you to confirm this and provide you with information as to how you may look to find out yourself if an undisclosed commission was associated with the sale of a PPI policy that was sold to you.</p>   
                 
-            </div>        
+            </div>    
+
+      </div>          
 
 </Layout>
 )

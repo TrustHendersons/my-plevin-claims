@@ -6,6 +6,8 @@ const PrivacyPage = () => (
   <Layout>
     <Seo title="Home" />
 
+    <div className="lg:container">
+
       <div className="grid grid-cols-0 gap-4">
 
     <h1 class="display-1">Privacy Policy</h1>
@@ -205,10 +207,12 @@ const PrivacyPage = () => (
         
         <h4 className="underline">Complaints</h4>                
 
-        <p>You have the right to make a complaint at any time to the Information Commissioner’s Office (ICO), the UK supervisory authority for data protection issues at <a href="http://www.ico.org.uk" target="_blank">www.ico.org.uk.</a></p>  
+        <p>You have the right to make a complaint at any time to the Information Commissioner’s Office (ICO), the UK supervisory authority for data protection issues at <a href="http://www.ico.org.uk" target="_blank" rel="noopener noreferrer">www.ico.org.uk.</a></p>  
         
         <p>We would, however, appreciate the chance to deal with your concerns before you approach the ICO so please contact us in the first instance using the contact details set out above.</p>
 </div>    
+
+</div>
 
 </Layout>
 )
