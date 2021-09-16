@@ -12,8 +12,8 @@ const ThanksPage = () => {
   <Layout>
     <div class="container">
     
-      <div>
-          <section className="section">
+      <div className="h-96"> 
+          <section className="section my-16">
               <h1>Thank you</h1>
 
               <p>Our expert team will now begin checking whether you may be due a refund.  </p>

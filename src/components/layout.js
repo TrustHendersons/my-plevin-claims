@@ -25,7 +25,7 @@ const Layout = ({ children }) => {
   
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
 
-        <main>
+        <main className="flex flex-grow flex-col">
             {children}
         </main>
 
