@@ -24,7 +24,7 @@ function Form1 ({
                       className="mr-2"
                       type="checkbox"
                       name="lenders"
-                      value="Lloyds, " 
+                      value="Lloyds " 
                       {...register("lenders", { required: true } )}             
                     />
                   Lloyds</label>                      
@@ -36,7 +36,7 @@ function Form1 ({
                       className="mr-2"
                       type="checkbox"
                       name="lenders"
-                      value="Barclays, " 
+                      value="Barclays " 
                       {...register("lenders", { required: true } )}             
                     />
                   Barclays</label>                      
@@ -48,7 +48,7 @@ function Form1 ({
                       className="mr-2"
                       type="checkbox"
                       name="lenders"
-                      value="Barclaycard, " 
+                      value="Barclaycard " 
                       {...register("lenders", { required: true } )}             
                     />
                   Barclaycard</label>                      
@@ -60,7 +60,7 @@ function Form1 ({
                       className="mr-2"
                       type="checkbox"
                       name="lenders"
-                      value="Natwest, " 
+                      value="Natwest " 
                       {...register("lenders", { required: true } )}             
                     />
                   Natwest</label>                      
@@ -72,7 +72,7 @@ function Form1 ({
                       className="mr-2"
                       type="checkbox"
                       name="lenders"
-                      value="RBS, " 
+                      value="RBS " 
                       {...register("lenders", { required: true } )}             
                     />
                   RBS</label>                      
@@ -84,7 +84,7 @@ function Form1 ({
                       className="mr-2"
                       type="checkbox"
                       name="lenders"
-                      value="TSB, " 
+                      value="TSB " 
                       {...register("lenders", { required: true } )}             
                     />
                   TSB</label>                      
@@ -96,7 +96,7 @@ function Form1 ({
                       className="mr-2"
                       type="checkbox"
                       name="lenders"
-                      value="Halifax, " 
+                      value="Halifax " 
                       {...register("lenders", { required: true } )}             
                     />
                   Halifax</label>                      
@@ -108,7 +108,7 @@ function Form1 ({
                       className="mr-2"
                       type="checkbox"
                       name="lenders"
-                      value="Bank of Scotland, " 
+                      value="Bank of Scotland " 
                       {...register("lenders", { required: true } )}             
                     />
                   Bank of Scotland</label>                      
@@ -120,7 +120,7 @@ function Form1 ({
                       className="mr-2"
                       type="checkbox"
                       name="lenders"
-                      value="HSBC, " 
+                      value="HSBC " 
                       {...register("lenders", { required: true } )}             
                     />
                   HSBC</label>                      
@@ -132,7 +132,7 @@ function Form1 ({
                       className="mr-2"
                       type="checkbox"
                       name="lenders"
-                      value="Capital One, " 
+                      value="Capital One " 
                       {...register("lenders", { required: true } )}             
                     />
                   Capital One</label>                      
@@ -144,7 +144,7 @@ function Form1 ({
                       className="mr-2"
                       type="checkbox"
                       name="lenders"
-                      value="MBNA, " 
+                      value="MBNA " 
                       {...register("lenders", { required: true } )}             
                     />
                   MBNA</label>                      
@@ -156,7 +156,7 @@ function Form1 ({
                       className="mr-2"
                       type="checkbox"
                       name="lenders"
-                      value="Egg, " 
+                      value="Egg " 
                       {...register("lenders", { required: true } )}             
                     />
                   Egg</label>                      
@@ -168,7 +168,7 @@ function Form1 ({
                       className="mr-2"
                       type="checkbox"
                       name="lenders"
-                      value="Mint, " 
+                      value="Mint " 
                       {...register("lenders", { required: true } )}             
                     />
                   Mint</label>                      
@@ -180,7 +180,7 @@ function Form1 ({
                       className="mr-2"
                       type="checkbox"
                       name="lenders"
-                      value="Clydesdale, " 
+                      value="Clydesdale " 
                       {...register("lenders", { required: true } )}             
                     />
                   Clydesdale</label>                      
@@ -192,7 +192,7 @@ function Form1 ({
                       className="mr-2"
                       type="checkbox"
                       name="lenders"
-                      value="Yorkshire, " 
+                      value="Yorkshire " 
                       {...register("lenders", { required: true } )}             
                     />
                   Yorkshire</label>                      
@@ -204,7 +204,7 @@ function Form1 ({
                       className="mr-2"
                       type="checkbox"
                       name="lenders"
-                      value="M and S, " 
+                      value="M and S " 
                       {...register("lenders", { required: true } )}             
                     />
                   M&amp;S Bank</label>                      
@@ -216,7 +216,7 @@ function Form1 ({
                       className="mr-2"
                       type="checkbox"
                       name="lenders"
-                      value="Santander, " 
+                      value="Santander " 
                       {...register("lenders", { required: true } )}             
                     />
                   Santander</label>                      
@@ -228,7 +228,7 @@ function Form1 ({
                       className="mr-2"
                       type="checkbox"
                       name="lenders"
-                      value="Alliance, " 
+                      value="Alliance " 
                       {...register("lenders", { required: true } )}             
                     />
                   Alliance</label>                      
@@ -240,7 +240,7 @@ function Form1 ({
                       className="mr-2"
                       type="checkbox"
                       name="lenders"
-                      value="Abbey, " 
+                      value="Abbey " 
                       {...register("lenders", { required: true } )}             
                     />
                   Abbey</label>                      
@@ -252,7 +252,7 @@ function Form1 ({
                       className="mr-2"
                       type="checkbox"
                       name="lenders"
-                      value="Black Horse, " 
+                      value="Black Horse " 
                       {...register("lenders", { required: true } )}             
                     />
                   Black Horse</label>                      
@@ -264,7 +264,7 @@ function Form1 ({
                       className="mr-2"
                       type="checkbox"
                       name="lenders"
-                      value="Northern Rock, " 
+                      value="Northern Rock " 
                       {...register("lenders", { required: true } )}             
                     />
                   Northern Rock</label>                      
@@ -276,7 +276,7 @@ function Form1 ({
                       className="mr-2"
                       type="checkbox"
                       name="lenders"
-                      value="Coop, " 
+                      value="Coop " 
                       {...register("lenders", { required: true } )}             
                     />
                   Co-operative Bank</label>                      
@@ -290,7 +290,7 @@ function Form1 ({
                       className="mr-2"
                       type="checkbox"
                       name="lenders"
-                      value="Other, " 
+                      value="Other " 
                       {...register("lenders", { required: true } )}             
                     />
                   Other</label>                      
