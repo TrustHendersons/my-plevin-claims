@@ -1,9 +1,9 @@
 module.exports = {
   siteMetadata: {
     title: `My Plevin Claims`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
+    description: `£billions can be claimed in 'Plevin' cases (also know as PPI2) after a landmark court ruling. Crucially, the PPI Deadline does NOT apply to these claims!`,
     author: `@2Owls`,
-    siteUrl: `https://2owls.co.uk`,
+    siteUrl: `https://plevin-claims.com`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -29,13 +29,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `my-plevin-claims`,
+        short_name: `plevin`,
         start_url: `/`,
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/mpc-icon.png`, // This path is relative to the root of the site.
       },
     },
     `gatsby-plugin-gatsby-cloud`,
