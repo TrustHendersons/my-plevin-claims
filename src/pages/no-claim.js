@@ -9,7 +9,7 @@ const NoClaimPage = () => {
   return (
 
   <Layout>
-      <div className="container h-5/6">
+      <div className="container h-full">
     
       <div>
           <section className="section">

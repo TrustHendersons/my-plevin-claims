@@ -1,14 +1,11 @@
-import React, {useEffect, createRef, useState} from "react";
+import React, {useState} from "react";
 import { navigate } from "gatsby"
 import Layout from "../components/layout"
 import Form1 from "../components/Form1";
 import Form2 from "../components/Form2";
 import Form3 from "../components/Form2a";
 import Form4 from "../components/Form3";
-import Form5 from "../components/Form4";
 import { useForm } from "react-hook-form";
-import * as yup from "yup";
-import { yupResolver } from "@hookform/resolvers/yup";
 
 
 function MainComponent() {
@@ -16,7 +13,6 @@ function MainComponent() {
     register,
     trigger,
     formState: { errors },
-    watch,
     getValues
   } = useForm({
     mode: "onChange",
@@ -25,8 +21,6 @@ function MainComponent() {
 
     }
   });
-
-  const watchAllFields = watch();
 
   const [defaultValues, setDefaultValues] = useState({});
 
@@ -82,10 +76,11 @@ function MainComponent() {
           shouldDisplay={currentForm === 3}
           register={register}  
           errors={errors}
+          values={getValues()}
         />
       )
     },
-    {
+    /*
       fields: ["email"],
       component: (errors) => (
         <Form5
@@ -95,7 +90,7 @@ function MainComponent() {
           values={getValues()}
         />
       )
-    }    
+      */ 
   ];
 
   const moveToPrevious = () => {
@@ -109,23 +104,21 @@ function MainComponent() {
     });
   };
 
-  {/*  const moveToNext = () => {
-    const isStepValid = trigger();
-    if (isStepValid) setCurrentForm(currentForm + 1);
-  };*/} 
-
   const prevButton = currentForm !== 0;
   const nextButton = currentForm !== forms.length - 1;
+
   const handleSubmit = e => {
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({ "form-name": "contact", ...getValues() })
-    })
-    .then((response) => {
-      navigate("/thank-you/")
-    })
-    .catch(error => alert(error));
+    setDefaultValues(prev => ({ ...prev, ...getValues() }));
+    trigger(forms[currentForm].fields).then(valid => {
+      if (valid) fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: encode({ "form-name": "contact", ...getValues() })
+      })
+      .then((response) => {
+        navigate("/thank-you/")
+      })
+    });
   } 
 
   return (
@@ -133,10 +126,11 @@ function MainComponent() {
     <Layout>
 
       <div className="container">  
-
-      <h2 className="text-center uppercase text-green-500 mb-2">Start Your Free Plevin Check today</h2>
-      <hr className="my-2"/>
-      <p className="text-center">Answer the quick questions below to see if you may have a claim</p> 
+        <div className="mx-4">
+          <h2 className="text-center uppercase text-green-500 mb-2">Start Your Free Plevin Check today</h2>
+          <hr className="my-2"/>
+          <p className="text-center">Answer the quick questions below to see if you may have a claim</p> 
+        </div>  
 
       <section className="section md:shadow w-50">
 
@@ -179,7 +173,7 @@ function MainComponent() {
             </button>
           )}
 
-          {currentForm === 4 && (
+          {currentForm === 3 && (
             <button
               onClick={handleSubmit}
               className="btn-green"

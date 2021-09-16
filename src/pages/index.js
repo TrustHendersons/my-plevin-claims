@@ -11,9 +11,9 @@ const IndexPage = () => (
 
     <div className="lg:container">
 
-        <div className="flex grid grid-cols-1 md:grid-cols-3 gap-4 h-2/3 text-center">
+        <div className="flex grid grid-cols-none md:grid-cols-3 gap-4 h-2/3 text-center">
 
-          <div className="w-5/6 md:w-2/3 pt-6 col-span-2 h-full mx-auto">
+          <div className="w-5/6 md:w-2/3 pt-6 md:col-span-2 h-full mx-auto">
 
             <div>
               <h1 className="uppercase text-green-500 mb-1 uppercase">Missed the PPI deadline?</h1>
@@ -50,7 +50,7 @@ const IndexPage = () => (
           </div>          
 
           
-          <div>  
+          <div class="flex items-end">  
             <StaticImage
             src="../images/header_cutout.png"
             transformOptions={"cover"}

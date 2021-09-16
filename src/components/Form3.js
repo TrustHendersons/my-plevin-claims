@@ -9,7 +9,7 @@ function Form3({ register, errors, shouldDisplay }) {
         <h3 className="text-blue-dark mb-1">Please provide your contact details.</h3> 
         <p>This is so we can contact you and send you documentation regarding your claim.</p> 
 
-        <div class="grid grid grid-cols-2 gap-4"> 
+        <div class="md:grid grid-cols-2 gap-4"> 
 
         <div>
         <label htmlFor="email"  class="mr-2">Email:</label>
@@ -24,7 +24,7 @@ function Form3({ register, errors, shouldDisplay }) {
         Please provide an email address</p>}         
         </div> 
 
-        <div>
+        <div className="mt-4 md:mt-0">
         <label htmlFor="tel"  class="mr-2">Telephone:</label>
         <input   
           type="tel"
@@ -37,7 +37,7 @@ function Form3({ register, errors, shouldDisplay }) {
         Please provide a telephone number</p>}  
         </div>  
 
-        <div className="col-span-2 flex items-center">
+        <div className="mt-4 md:mt-0 col-span-2 flex items-center">
           <input
               className="float-left m-3"
               type="checkbox"
