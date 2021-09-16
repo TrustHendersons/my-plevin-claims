@@ -15,7 +15,7 @@ function Form2({
   
     useEffect(() => {
       PostcodeLookup.setup({
-        apiKey: "iddqd",
+        apiKey: "ak_ktcybmknJKLTcXkHm11Z8JDhdMvyG",
         context: context.current,
         outputFields: {
               line_1: '#prevAddress_line1',  
@@ -52,7 +52,7 @@ function Form2({
 
             <div>
                 <div>  
-                  <label htmlFor="prevAddress_line1" class="mr-2">Address 1:</label>
+                  <label class="mr-2">Address 1:</label>
                   <input
                     type="text"
                     id="prevAddress_line1"
@@ -68,7 +68,7 @@ function Form2({
                     type="text"
                     id="prevAddress_line2"
                     name="prevAddress_line2"
-                    {...register("prevAddress_line2", )}     
+                    {...register("prevAddress_line2" )}     
                   />
                 </div>
 

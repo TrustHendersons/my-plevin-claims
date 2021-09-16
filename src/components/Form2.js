@@ -15,7 +15,7 @@ function Form2({
   
     useEffect(() => {
       PostcodeLookup.setup({
-        apiKey: "iddqd",
+        apiKey: "ak_ktcybmknJKLTcXkHm11Z8JDhdMvyG",
         context: context.current,
         outputFields: {
               line_1: '#address_line1',  
