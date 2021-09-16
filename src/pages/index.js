@@ -110,13 +110,6 @@ const IndexPage = () => (
         </div>
       </div> 
 
-
-      <div>
-        <div className="lg:container mt-4">
-          <p className="text-sm text-center">You can pursue a claim yourself without using a Claims Management Company and without cost.  You will first need to complain directly to the appropriate third party who sold you the product and if this is unsuccessful, you can complain through the Financial Ombudsman Service or, if the third party is no longer trading, the Financial Services Compensation Scheme.</p>
-        </div>  
-      </div>
-
   </Layout>
 )
 
