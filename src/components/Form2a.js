@@ -42,7 +42,9 @@ function Form2({
     <div style={{ display: shouldDisplay ? "block" : "none" }}>
 
         <h3 className="text-blue-dark mb-1">Previous Address</h3> 
-        <p>If you lived at a different address when you held the PPI, please enter it below. If your address was the same as it is now, just click Next.</p>      
+        <p>If you lived at a different address when you held the PPI, please enter it below. If your address was the same as it is now, just click Next.</p>     
+
+                <hr/> 
 
           <div className="form-group flex grid grid-cols-none grid-rows-none md:grid-cols-2 md:grid-rows-1 gap-4 md:gap-x-20">
 

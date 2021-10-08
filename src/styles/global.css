@@ -35,6 +35,18 @@
 
 }
 
+.steps {
+  margin-right: 1rem;
+  padding: 1rem;
+  float: left;
+  border: 1px solid #3b3b3b;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+
+  color: #394053;
+  background: #EDAE49;
+}
+
 
 /*--- sticky footer ---*/
 #gatsby-focus-wrapper, #___gatsby {
@@ -128,32 +140,19 @@ h1, h2, h3, h4 {
   font-style: normal; 
 }
 
-[type='checkbox']:checked, [type='radio']:checked {
-  border-color: transparent;
-  background-color: #7BAE7A;
-  background-size: 100% 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-}
 
-
-
-input::-webkit-input-placeholder, date::-webkit-input-placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-  color: #C6C6C6;
-  font-weight: 100;
-  opacity: 1; /* Firefox */
-}
 
 :-ms-input-placeholder { /* Internet Explorer 10-11 */
-  color: red;
+  color: #C6C6C6;
 }
 
 ::-ms-input-placeholder { /* Microsoft Edge */
-  color: red;
+  color: #C6C6C6;
 }
 
 progress {
   width: 100%;
+  height: 10px;
   color: #cdcdcd;
   margin-bottom: 1rem;
 }
@@ -162,14 +161,45 @@ progress::-webkit-progress-bar {
   background-color: #cdcdcd;
 }
 progress::-webkit-progress-value {
-  background-color: #7BAE7A;
+  background-color: #EDAE49;
 }
 
 /*--form --*/
 
-form input {
+.form-group input, .form-group select {
   width: 100%;
+  border-radius: 5px;
 }
+
+/*-- Checkbox style --*/
+
+label {
+  position:relative;   
+  cursor:pointer;
+}
+label [type="checkbox"] {
+  display:none;
+}
+[type="checkbox"] + span {
+  display:inline-block;
+  width: 100%;
+  padding:1em;
+  background: #394053;
+  color: #EDAE49;
+  border: 1px solid #394053;
+  border-radius: 5px;
+}
+:checked + span {
+  background: #EDAE49;
+  color: #394053;
+  display:inline-block;  
+  border: 1px solid #394053;
+}
+[type="checkbox"][disabled] + span {
+  background:#e0dede;  
+}
+
+/*--  --*/
 
 .idpc-select {
   margin-top: 1rem;
@@ -177,7 +207,7 @@ form input {
 }
 
 .idpc-input {
-  margin-top: 1rem;
+  margin-top: 1.8rem;
   width: auto;
 }
 
@@ -203,26 +233,26 @@ ol ol > li:before {
 
 @layer components {
     .btn-blue {
-      @apply w-1/3 py-2 px-4 m-2 bg-blue-500 text-white font-semibold rounded-md shadow-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-700 focus:ring-opacity-75;
+      @apply w-1/3 py-2 px-4 m-2 bg-blue-500 text-white font-semibold rounded-md shadow-md hover:bg-blue-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-green-700 focus:ring-opacity-75;
     }
 
     .idpc-button {
       @apply py-2 px-4 mt-2 mx-auto bg-blue-500 text-white font-semibold rounded-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-700 focus:ring-opacity-75;
-    }  
-
-    .btn-blue-input {
-      @apply w-full bg-blue-500 text-white font-semibold shadow-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-opacity-75 font-bold p-2 uppercase border-gray-500 border-t border-b border-r;
     }    
 
     .btn-green {
-        @apply w-1/3 py-2 px-4 m-2 bg-green-500 text-white font-semibold rounded-md shadow-md hover:bg-green-200 hover:text-green-700 focus:outline-none focus:ring-2 focus:ring-green-700 focus:ring-opacity-75;
+        @apply w-1/3 py-4 px-4 m-2 bg-green-500 text-white font-semibold rounded-md shadow-md hover:bg-green-600 hover:text-white focus:outline-none focus:ring-2 focus:ring-green-700 focus:ring-opacity-75;
       }   
       
     .btn-start {
-        @apply block py-2 px-8 my-2 bg-green-500 text-white font-semibold rounded-md shadow-md hover:bg-green-200 hover:text-green-700 focus:outline-none focus:ring-2 focus:ring-green-700 focus:ring-opacity-75;
+        @apply block py-2 px-8 my-2 bg-green-500 text-white font-semibold rounded-md shadow-md hover:bg-green-200 hover:text-white focus:outline-none focus:ring-2 focus:ring-green-700 focus:ring-opacity-75;
       }   
 
     .section {
       @apply p-4 md:p-12 mx-4 mb-16 bg-gray-50 text-gray-500;
+    }
+
+    .section-form {
+      @apply px-2 py-2 md:px-6 md:py-6 mx-4 mb-16 bg-gray-50 text-gray-500 rounded-md;
     }
   }

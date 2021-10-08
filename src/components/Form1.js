@@ -15,19 +15,20 @@ function Form1 ({
         <h3 className="blue-dark mb-1">Please select all the banks you had PPI with:</h3> 
         <p>(you can select multiple banks, this could mean you have more claims)</p>
 
-
+        <hr className="mt-2"/>
+        
         <div className="form-group grid grid-cols-2 md:grid-cols-3 gap-4 align-items-center">
 
               <div> 
                 <label>
                   <input
-                      className="mr-2"
-                      type="checkbox"
-                      name="lenders"
-                      value=" Lloyds" 
-                      {...register("lenders", { required: true } )}             
-                    />
-                  Lloyds</label>                      
+                    className="mr-2"
+                    type="checkbox"
+                    name="lenders"
+                    value=" Lloyds" 
+                    {...register("lenders", { required: true } )}             
+                  />                
+                <span><FeatherIcon icon="check-circle" size="16" className="mr-4 mt-1 float-left" />Lloyds</span></label>                      
               </div>  
 
               <div> 
@@ -39,7 +40,7 @@ function Form1 ({
                       value=" Barclays" 
                       {...register("lenders", { required: true } )}             
                     />
-                  Barclays</label>                      
+                  <span><FeatherIcon icon="check-circle" size="16" className="mr-4 mt-1 float-left" />Barclays</span></label>                      
               </div>  
 
               <div> 
@@ -51,7 +52,7 @@ function Form1 ({
                       value=" Barclaycard" 
                       {...register("lenders", { required: true } )}             
                     />
-                  Barclaycard</label>                      
+                      <span><FeatherIcon icon="check-circle" size="16" className="mr-4 mt-1 float-left" />Barclaycard</span></label>                      
               </div>    
 
               <div> 
@@ -63,7 +64,7 @@ function Form1 ({
                       value=" Natwest" 
                       {...register("lenders", { required: true } )}             
                     />
-                  Natwest</label>                      
+                  <span><FeatherIcon icon="check-circle" size="16" className="mr-4 mt-1 float-left" />Natwest</span></label>                      
               </div>   
               
               <div> 
@@ -75,7 +76,7 @@ function Form1 ({
                       value=" RBS" 
                       {...register("lenders", { required: true } )}             
                     />
-                  RBS</label>                      
+                  <span><FeatherIcon icon="check-circle" size="16" className="mr-4 mt-1 float-left" />RBS</span></label>                      
               </div>   
               
               <div> 
@@ -87,7 +88,7 @@ function Form1 ({
                       value=" TSB" 
                       {...register("lenders", { required: true } )}             
                     />
-                  TSB</label>                      
+                  <span><FeatherIcon icon="check-circle" size="16" className="mr-4 mt-1 float-left" />TSB</span></label>                      
               </div>   
 
               <div> 
@@ -99,7 +100,7 @@ function Form1 ({
                       value=" Halifax" 
                       {...register("lenders", { required: true } )}             
                     />
-                  Halifax</label>                      
+                  <span><FeatherIcon icon="check-circle" size="16" className="mr-4 mt-1 float-left" />Halifax</span></label>                      
               </div>    
 
               <div> 
@@ -111,7 +112,7 @@ function Form1 ({
                       value=" Bank of Scotland" 
                       {...register("lenders", { required: true } )}             
                     />
-                  Bank of Scotland</label>                      
+                  <span><FeatherIcon icon="check-circle" size="16" className="mr-4 mt-1 float-left" />Bank of Scotland</span></label>                      
               </div>     
 
               <div> 
@@ -123,7 +124,7 @@ function Form1 ({
                       value=" HSBC" 
                       {...register("lenders", { required: true } )}             
                     />
-                  HSBC</label>                      
+                  <span><FeatherIcon icon="check-circle" size="16" className="mr-4 mt-1 float-left" />HSBC</span></label>                      
               </div>   
 
               <div> 
@@ -135,7 +136,7 @@ function Form1 ({
                       value=" Capital One" 
                       {...register("lenders", { required: true } )}             
                     />
-                  Capital One</label>                      
+                  <span><FeatherIcon icon="check-circle" size="16" className="mr-4 mt-1 float-left" />Capital One</span></label>                      
               </div>    
 
               <div> 
@@ -147,7 +148,7 @@ function Form1 ({
                       value=" MBNA" 
                       {...register("lenders", { required: true } )}             
                     />
-                  MBNA</label>                      
+                  <span><FeatherIcon icon="check-circle" size="16" className="mr-4 mt-1 float-left" />MBNA</span></label>                      
               </div>  
 
               <div> 
@@ -159,7 +160,7 @@ function Form1 ({
                       value=" Egg" 
                       {...register("lenders", { required: true } )}             
                     />
-                  Egg</label>                      
+                  <span><FeatherIcon icon="check-circle" size="16" className="mr-4 mt-1 float-left" />Egg</span></label>                      
               </div>  
 
               <div> 
@@ -171,7 +172,7 @@ function Form1 ({
                       value=" Mint" 
                       {...register("lenders", { required: true } )}             
                     />
-                  Mint</label>                      
+                  <span><FeatherIcon icon="check-circle" size="16" className="mr-4 mt-1 float-left" />Mint</span></label>                      
               </div>  
 
               <div> 
@@ -183,7 +184,7 @@ function Form1 ({
                       value=" Clydesdale" 
                       {...register("lenders", { required: true } )}             
                     />
-                  Clydesdale</label>                      
+                  <span><FeatherIcon icon="check-circle" size="16" className="mr-4 mt-1 float-left" />Clydesdale</span></label>                      
               </div>
 
               <div> 
@@ -195,7 +196,7 @@ function Form1 ({
                       value=" Yorkshire" 
                       {...register("lenders", { required: true } )}             
                     />
-                  Yorkshire</label>                      
+                  <span><FeatherIcon icon="check-circle" size="16" className="mr-4 mt-1 float-left" />Yorkshire</span></label>                      
               </div>    
 
               <div> 
@@ -207,7 +208,7 @@ function Form1 ({
                       value=" M and S" 
                       {...register("lenders", { required: true } )}             
                     />
-                  M&amp;S Bank</label>                      
+                  <span><FeatherIcon icon="check-circle" size="16" className="mr-4 mt-1 float-left" />M&amp;S Bank</span></label>                      
               </div>   
 
               <div> 
@@ -219,7 +220,7 @@ function Form1 ({
                       value=" Santander" 
                       {...register("lenders", { required: true } )}             
                     />
-                  Santander</label>                      
+                  <span><FeatherIcon icon="check-circle" size="16" className="mr-4 mt-1 float-left" />Santander</span></label>                      
               </div>  
               
               <div> 
@@ -231,7 +232,7 @@ function Form1 ({
                       value=" Alliance" 
                       {...register("lenders", { required: true } )}             
                     />
-                  Alliance</label>                      
+                  <span><FeatherIcon icon="check-circle" size="16" className="mr-4 mt-1 float-left" />Alliance</span></label>                      
               </div>                                                        
 
               <div> 
@@ -243,7 +244,7 @@ function Form1 ({
                       value=" Abbey" 
                       {...register("lenders", { required: true } )}             
                     />
-                  Abbey</label>                      
+                  <span><FeatherIcon icon="check-circle" size="16" className="mr-4 mt-1 float-left" />Abbey</span></label>                      
               </div>    
 
               <div> 
@@ -255,7 +256,7 @@ function Form1 ({
                       value=" Black Horse" 
                       {...register("lenders", { required: true } )}             
                     />
-                  Black Horse</label>                      
+                  <span><FeatherIcon icon="check-circle" size="16" className="mr-4 mt-1 float-left" />Black Horse</span></label>                      
               </div>   
 
               <div> 
@@ -267,19 +268,19 @@ function Form1 ({
                       value=" Northern Rock" 
                       {...register("lenders", { required: true } )}             
                     />
-                  Northern Rock</label>                      
+                  <span><FeatherIcon icon="check-circle" size="16" className="mr-4 mt-1 float-left" />Northern Rock</span></label>                      
               </div>                    
  
               <div> 
                 <label>
                   <input
-                      className="mr-2"
+                      className="mr-2 custom-checkbox"
                       type="checkbox"
                       name="lenders"
                       value=" Coop" 
                       {...register("lenders", { required: true } )}             
                     />
-                  Co-operative Bank</label>                      
+                  <span><FeatherIcon icon="check-circle" size="16" className="mr-4 mt-1 float-left" />Co-operative Bank</span></label>                      
               </div>  
         </div>
        
@@ -293,7 +294,7 @@ function Form1 ({
                       value=" Other" 
                       {...register("lenders", { required: true } )}             
                     />
-                  Other</label>                      
+                  <span><FeatherIcon icon="check-circle" size="16" className="mr-4 mt-1 float-left" />Other</span></label>                      
               </div>  
               <div className="mt-2">
                 <input

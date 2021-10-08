@@ -18,6 +18,7 @@ const IndexPage = () => (
             <div>
               <h1 className="uppercase text-green-500 mb-1 uppercase">Missed the PPI deadline?</h1>
               <h2 className="uppercase text-green-500">PPI claim rejected?</h2>
+              <hr className="my-2"/>
               <p className="text-lg">£billions can be claimed in 'Plevin' cases (also know as PPI2) after a landmark court ruling. <strong>Crucially, the PPI Deadline does NOT apply to these claims!</strong></p>
             </div>
 

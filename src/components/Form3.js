@@ -9,19 +9,21 @@ function Form3({ register, errors, shouldDisplay }) {
         <h3 className="text-blue-dark mb-1">Please provide your contact details.</h3> 
         <p>This is so we can contact you and send you documentation regarding your claim.</p> 
 
-        <div class="md:grid grid-cols-2 gap-4"> 
+        <hr/>
+
+        <div class="form-group md:grid gap-4"> 
 
         <div>
-        <label htmlFor="email"  class="mr-2">Email:</label>
-        <input   
-          type="email"
-          id="email"                
-          name="email"
-          placeholder="Enter your email"                
-          {...register("email", { required: true } )}   
-        />  
-        {errors.email?.type === 'required' && <p class="errors mt-2"><FeatherIcon icon="alert-triangle" className="mr-2" />
-        Please provide an email address</p>}         
+          <label htmlFor="email"  class="mr-2">Email:</label>
+          <input   
+            type="email"
+            id="email"                
+            name="email"
+            placeholder="Enter your email"                
+            {...register("email", { required: true } )}   
+          />  
+          {errors.email?.type === 'required' && <p class="errors mt-2"><FeatherIcon icon="alert-triangle" className="mr-2" />
+          Please provide an email address</p>}         
         </div> 
 
         <div className="mt-4 md:mt-0">
@@ -37,6 +39,8 @@ function Form3({ register, errors, shouldDisplay }) {
         Please provide a telephone number</p>}  
         </div>  
 
+        </div>
+
         <div className="mt-4 md:mt-0 col-span-2 flex items-center">
           <input
               className="float-left m-3"
@@ -51,7 +55,7 @@ function Form3({ register, errors, shouldDisplay }) {
         {errors.privacy?.type === 'required' && <p class="errors"><FeatherIcon icon="alert-triangle" className="mr-2" />
         You must agree to the privacy policy</p>}  
 
-        </div>
+
 
     </div>
   );

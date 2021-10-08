@@ -44,6 +44,8 @@ function Form2({
         <h3 className="text-blue-dark mb-1">Please provide your details.</h3> 
         <p>This is so we can find your bank account with the lenders.</p>      
 
+        <hr/>
+        
           <div className="form-group flex grid grid-cols-none grid-rows-none md:grid-cols-2 md:grid-rows-1 gap-4 md:gap-x-20">
 
             <div>
