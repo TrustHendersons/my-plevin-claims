@@ -12,8 +12,8 @@ function Form1 ({
   return (
     <div style={{ display: shouldDisplay ? "block" : "none" }}>
 
-        <h3 className="blue-dark mb-1">Please select all the banks you had PPI with:</h3> 
-        <p>(you can select multiple banks, this could mean you have more claims)</p>
+        <h3 className="blue-dark mb-1">Please select <span className="underline">ALL</span> the banks you had PPI with:</h3> 
+        <p className="font-lg">(you can select <strong>multiple banks</strong>, this could mean you have more claims)</p>
 
         <hr className="mt-2"/>
         
@@ -307,6 +307,7 @@ function Form1 ({
               </div>  
         </div>          
         {errors.lenders?.type === 'required' && <p class="errors mt-4"><FeatherIcon icon="alert-triangle" className="mr-2" />Please choose at least one lender</p>}
+        <p className="mt-3"><FeatherIcon icon="alert-triangle" className="float-left mr-2" />Have you ticked every lender you want us to check?</p>
     </div>
   );
 }
